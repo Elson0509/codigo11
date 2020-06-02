@@ -1,17 +1,45 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+// import registerServiceWorker from './registerServiceWorker';
+import { unregister } from './registerServiceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import { HashRouter, Route, Switch } from 'react-router-dom';
+import './assets/base.css';
+import './assets/style.css';
+import Main from './Pages/Main';
+import configureStore from './config/configureStore';
+import { Provider } from 'react-redux';
+import Landing from './Pages/Landing/Landing'
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const store = configureStore();
+const rootElement = document.getElementById('root');
+
+
+const renderApp = Component => {
+  ReactDOM.render(
+    <Provider store={store}>
+      <HashRouter>
+        <Switch>
+          <Route exact path="/">
+            <Landing/>
+          </Route>
+          <Component />
+        </Switch>
+      </HashRouter>
+    </Provider>,
+    rootElement
+  );
+};
+
+renderApp(Main);
+
+if (module.hot) {
+  module.hot.accept('./Pages/Main', () => {
+    const NextApp = require('./Pages/Main').default;
+    renderApp(NextApp);
+  });
+}
+unregister();
+
+// registerServiceWorker();
+
