@@ -149,7 +149,7 @@ const ModalTermos = (props) => {
 
                                 <p> SEÇÃO 18 - INFORMAÇÕES DE CONTATO</p>
 
-                                <p>As perguntas sobre os Termos de serviço devem ser enviadas para nós através do contato@codigo11.com.</p>
+                                <p>As perguntas sobre os Termos de serviço devem ser enviadas para nós através do contato@codigo11.com.br</p>
                             </div>
                         </ModalBody>
                         <ModalFooter>
