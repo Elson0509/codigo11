@@ -34,7 +34,7 @@ const ChartImovelArea = (props) => {
             }]
         }
 
-         props.imoveis.map((ter, ind) => {
+         props.imoveis.forEach((ter, ind) => {
             data.labels.push(`${props.type} ${ind+1}`);
             data.datasets[0].data.push(ter.area)
             data.datasets[0].backgroundColor.push(lineCharColors[ind % lineCharColors.length])

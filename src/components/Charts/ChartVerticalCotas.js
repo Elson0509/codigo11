@@ -24,7 +24,7 @@ const ChartVerticalCotas = (props) => {
         let quantidade_anterior = -1
 
         props.eventos.forEach(el => {
-            if(el.qtd_total != quantidade_anterior){
+            if(el.qtd_total !== quantidade_anterior){
                 info.labels.push(revertData(el.data));
                 info.datasets[0].data.push(el.qtd_total)
                 quantidade_anterior = el.qtd_total

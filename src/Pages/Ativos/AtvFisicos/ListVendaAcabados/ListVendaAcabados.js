@@ -6,7 +6,6 @@ import ListVendaAcabTotal from '../../../../components/Lists/ListImovelVendaAcab
 const ListVendaAcabados = (props) => {
     return (
         <Fragment>
-            {console.log("imoveis venda acabado", props.imoveis)}
             {props.imoveis &&
                 props.imoveis.length === 0 ? 
                     <h3 className="text-center p-2">Não há imóveis para serem exibidos</h3>

@@ -4,7 +4,6 @@ import ListTerreno from '../../../../components/Lists/ListTerreno'
 import ListTerrenoTotal from '../../../../components/Lists/ListTerrenoTotal'
 
 const ListTerrenos = (props) => {
-    let totalArea = 0;
 
     return (
         <Fragment>

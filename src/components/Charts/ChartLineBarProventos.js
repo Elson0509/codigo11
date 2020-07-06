@@ -33,7 +33,7 @@ const ChartLineBarProventos = (props) => {
 
         let acumulador = 0;
         props.eventos.forEach(el => {
-            if(el.tipo=='Recebimento de provento'){
+            if(el.tipo==='Recebimento de provento'){
                 acumulador+=el.aluguel
                 info.labels.push(revertData(el.data))
                 info.datasets[0].data.push(acumulador.toFixed(2))

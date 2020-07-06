@@ -19,14 +19,10 @@ const Index = (props) => {
             .then(res => {
                 setLoading(false)
                 setDados(res.data)
-                console.log(res.data)
-                
             })
             .catch(err => {
                 setLoading(false)
                 setErrorMessage(err.response.data.message || 'Desculpe, mas um erro ocorreu.')
-                console.log('Erro', err.response.data.message)
-                
             })
     }, [])
 
@@ -40,7 +36,6 @@ const Index = (props) => {
                     transitionAppearTimeout={0}
                     transitionEnter={false}
                     transitionLeave={false}>
-                        {dados && console.log(dados)}
                         {dados && 
                             <Fragment>
                                 <PageTitle
@@ -50,7 +45,7 @@ const Index = (props) => {
                                     bgcolor={dados.segmento.bgcolor}
                                     color={dados.segmento.color}
                                 />
-                                {dados.proventos.length==0 ? (
+                                {dados.proventos.length===0 ? (
                                     <div className="alert alert-info" role="alert">
                                         Este FII ainda não possui informações suficientes para serem mostradas.
                                     </div>)

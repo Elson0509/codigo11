@@ -50,7 +50,6 @@ const Index = (props) => {
                     transitionAppearTimeout={0}
                     transitionEnter={false}
                     transitionLeave={false}>
-                        {dados && console.log(dados)}
                         {dados && 
                             <Fragment>
                                 <PageTitle

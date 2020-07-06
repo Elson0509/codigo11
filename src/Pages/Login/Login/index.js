@@ -2,7 +2,7 @@ import React, {useEffect, useState, Fragment} from 'react';
 import LoginForm from './LoginForm/LoginForm'
 import SignupForm from './SignupForm/SignupForm'
 import Tabs from 'react-responsive-tabs';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import ModalForgetPassword from '../../../components/Modals/ModalForgetPassword'
 
 const Index = (props) => {
@@ -42,7 +42,9 @@ const Index = (props) => {
             <ModalForgetPassword modal={modal} toggle={setModalHandler}/>
         
             <div className='loginPanel'>
-                <div className="logo-login margin-auto"/>
+                <Link to='/'>
+                    <div className="logo-login margin-auto"/>
+                </Link>
                 <Tabs 
                     tabsWrapperClass="body-tabs body-tabs-layout" 
                     transform={false} 

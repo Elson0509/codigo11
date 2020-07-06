@@ -34,7 +34,6 @@ const SignupForm = (props) => {
                 .catch(err => {
                     setErrorMessage(err.response.data.error.message.message || 'Desculpe, mas um erro ocorreu.')
                     setButtonText('CRIAR')
-                    console.log(err)
                 })
         },
         validationSchema

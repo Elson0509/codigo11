@@ -24,7 +24,6 @@ const SearchBox = (props) => {
                 setDisplay(false)
                 axios.get(`/fii/${removerAcentos(search).replace(' ','_').replace('11B', '').replace('11', '')}`)
                     .then( res => {
-                        console.log(res.data.fiis)
                         setLoading(false)
                         setDisplay(true)
                         setResult(res.data.fiis)

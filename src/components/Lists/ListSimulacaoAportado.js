@@ -1,5 +1,5 @@
 import React, {memo} from 'react';
-import {numberWithPercentual, IntegerNumberBrazilian, numberBrazilianMoney} from '../../util/Utilities'
+import {IntegerNumberBrazilian, numberBrazilianMoney} from '../../util/Utilities'
 
 const ListSimulacaoAportado = (props) => {
     return (

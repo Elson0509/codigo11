@@ -22,13 +22,12 @@ const VectorMap = (props) => {
     
     const markersImoveis = () => {
         const markers = []
-        props.imoveis.map((imv) => {
+        props.imoveis.forEach((imv) => {
             const mark = {}
             mark.markerOffset = -10
             mark.coordinates = [imv.longitude, imv.latitude]
             markers.push(mark)
         })
-        console.log(markers)
         return markers
     }
 

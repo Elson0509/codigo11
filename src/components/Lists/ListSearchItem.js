@@ -5,7 +5,6 @@ const ListSearchItem = (props) => {
     return (
         <li className={`list-group-item item-search ${props.item.bgcolor}`}>
             <div className="icon-search">
-                {console.log(props.item.icon)}
                 <Icon icon={props.item.icon}/>                
             </div>
             <div className="item-search-content">

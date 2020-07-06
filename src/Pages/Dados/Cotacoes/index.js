@@ -23,14 +23,12 @@ const Index = (props) => {
             })
             .catch(err => {
                 setErrorMessage(err.response.data.message || 'Desculpe, mas um erro ocorreu.')
-                console.log('Erro', err.response.data.message)
                 setLoading(false)
             })
     }, [])
 
     return (
         <Fragment>
-                {console.log("dados", dados)}
                 <ReactCSSTransitionGroup
                     component="div"
                     transitionName="TabsAnimation"
@@ -38,7 +36,6 @@ const Index = (props) => {
                     transitionAppearTimeout={0}
                     transitionEnter={false}
                     transitionLeave={false}>
-                        {dados && console.log(dados)}
                         {dados && 
                             <Fragment>
                                 <PageTitle

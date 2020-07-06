@@ -76,7 +76,6 @@ const Index = (props) => {
             setLoadingSearch(false)
             setTextPesquisar('Pesquisar')
             setResult(res.data)
-            console.log(res.data)
         })
         .catch(err => {
             setLoadingSearch(false)

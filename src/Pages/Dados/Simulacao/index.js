@@ -81,7 +81,6 @@ const Index = (props) => {
                     setSpinner(false)
                     setErrorMessage('')
                     setSimulacao(res.data)
-                    console.log("calculo", res.data)
                 })
                 .catch(err => {
                     setSpinner(false)
@@ -99,11 +98,11 @@ const Index = (props) => {
             setAlertdangerform('O aporte periódico está incorreto.')
             return false;
         }
-        if(aporteInicial == 0 && aportePeriodico == 0){
+        if(aporteInicial === 0 && aportePeriodico === 0){
             setAlertdangerform('Não é possível realizar uma simulação com ambos os aportes zerados. Não tenha medo de investir :)')
             return false;
         }
-        if(periodicidade != "mensal" && periodicidade != "bimestral" && periodicidade != "trimestral" && periodicidade != "semestral" && periodicidade != "anual"){
+        if(periodicidade !== "mensal" && periodicidade !== "bimestral" && periodicidade !== "trimestral" && periodicidade !== "semestral" && periodicidade !== "anual"){
             setAlertdangerform('A periodicidade está incorreta.')
             return false;
         }
@@ -136,7 +135,6 @@ const Index = (props) => {
                     transitionAppearTimeout={0}
                     transitionEnter={false}
                     transitionLeave={false}>
-                        {dados && console.log(dados)}
                         {dados && 
                             <Fragment>
                                 <PageTitle

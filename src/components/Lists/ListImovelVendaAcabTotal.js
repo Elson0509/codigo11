@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import Icon from '../Icon/Icon'
-import {numberToMetroQuadrado, numberWithPercentual, equivalenciaCamposFutebol, sizeCampoFutebol} from '../../util/Utilities'
+import {numberToMetroQuadrado, equivalenciaCamposFutebol, sizeCampoFutebol} from '../../util/Utilities'
 import {Popover, PopoverHeader, PopoverBody} from 'reactstrap';
-import ProgressBox from '../ProgressBars/ProgressBox';
+
 
 const ListImovelRendaAcabTotal = (props) => {
     const [popoverOpen, setPopoverOpen] = useState(false)
@@ -13,7 +13,7 @@ const ListImovelRendaAcabTotal = (props) => {
 
     const areaTotal = () => {
         let total = 0;
-        props.imoveis.map(imovel => {
+        props.imoveis.forEach(imovel => {
             total+=imovel.area
         })
         return total

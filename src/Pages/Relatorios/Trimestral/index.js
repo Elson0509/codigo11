@@ -47,7 +47,6 @@ const Index = (props) => {
                     transitionAppearTimeout={0}
                     transitionEnter={false}
                     transitionLeave={false}>
-                        {dados && console.log(dados)}
                         {dados && 
                             <Fragment>
                                 <PageTitle
@@ -57,7 +56,7 @@ const Index = (props) => {
                                     bgcolor={dados.segmento.bgcolor}
                                     color={dados.segmento.color}
                                 />
-                                {dados.atv_fin.length==0 && dados.contas.length==0 && dados.imoveis_qtd.length==0 && dados.vacancia.length==0 ? (
+                                {dados.atv_fin.length===0 && dados.contas.length===0 && dados.imoveis_qtd.length===0 && dados.vacancia.length===0 ? (
                                     <div className="alert alert-info" role="alert">
                                         Este FII ainda não possui informações suficientes para serem mostradas.
                                     </div>)

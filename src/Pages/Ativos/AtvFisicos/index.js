@@ -34,14 +34,10 @@ const Index = (props) => {
             .then(res => {
                 setLoading(false)
                 setDados(res.data)
-                console.log(dados)
-                
             })
             .catch(err => {
                 setLoading(false)
                 setErrorMessage(err.response.data.message)
-                console.log('Erro', err.response.data.message)
-                
             })
 
     }, [])
@@ -57,12 +53,11 @@ const Index = (props) => {
                     transitionAppearTimeout={0}
                     transitionEnter={false}
                     transitionLeave={false}>
-                        {dados && console.log(dados)}
                         {dados && 
                             <Fragment>
                                 <PageTitle
                                     heading={`Ativos físicos de ${dados.razao_social} (${dados.codigo})`}
-                                    subheading={`Data de referência: ${dados.data_ref}`}
+                                    subheading={``}
                                     icon="building"
                                     bgcolor={dados.segmento.bgcolor}
                                     color={dados.segmento.color}

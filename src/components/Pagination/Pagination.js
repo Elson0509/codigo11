@@ -28,7 +28,7 @@ const Pagination = (props) => {
     return (
         <nav aria-label="Page navigation">
             <ul className="pagination justify-content-center">
-                {props.page!=1 && <li className="page-item"><a className="page-link" onClick={() => props.change(props.page-1)}>Previous</a></li>}
+                {props.page!==1 && <li className="page-item"><a className="page-link" onClick={() => props.change(props.page-1)}>Anterior</a></li>}
                 {pageNumbers.map( num => {
                     return num == '...' ?
                         <li className="page-item disabled" key={`delta${countDelta++}`}>
@@ -44,7 +44,7 @@ const Pagination = (props) => {
                             </a>
                         </li>
                 })}
-                {props.page!=props.lastPage && <li className="page-item"><a className="page-link" onClick={() => props.change(props.page+1)}>Next</a></li>}
+                {props.page!=props.lastPage && <li className="page-item"><a className="page-link" onClick={() => props.change(props.page+1)}>Próximo</a></li>}
             </ul>
         </nav>
     );

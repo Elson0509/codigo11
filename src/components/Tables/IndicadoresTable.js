@@ -1,5 +1,5 @@
 import React, {memo, useState, Fragment} from 'react';
-import {numberBrazilianMoney, decimalNumberBrazilian, percentNumberBrazilian, IntegerAreaBrazilian} from '../../util/Utilities'
+import {numberBrazilianMoney, decimalNumberBrazilian, percentNumberBrazilian} from '../../util/Utilities'
 import {
     Tooltip
 } from 'reactstrap';

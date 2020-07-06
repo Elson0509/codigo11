@@ -22,7 +22,7 @@ const ChartProventos = (props) => {
 
 
         let prov = [...props.proventos];
-        prov.reverse().map( val => {
+        prov.reverse().forEach( val => {
             info.labels.push(val.data_pagamento);
             info.datasets[0].data.push(val.valor_rendimento)
         })

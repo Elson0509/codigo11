@@ -9,7 +9,6 @@ const SingleCard = (props) => {
 
     const getVariacao = () =>{
         if(props.valor){
-            console.log("entrou1")
             if(props.tipo_variacao){
                 return (
                     <div className="mt-2 text-success">

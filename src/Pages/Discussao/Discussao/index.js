@@ -48,8 +48,6 @@ const Index = (props) => {
         },
     ];
 
-    console.log(props)
-
     const getTabs = () => {
         return tabsContent.map((tab, index) => ({
             title: tab.title,
@@ -83,7 +81,6 @@ const Index = (props) => {
                     transitionAppearTimeout={0}
                     transitionEnter={false}
                     transitionLeave={false}>
-                        {dados && console.log(dados)}
                         {dados && 
                             <Fragment>
                                 <PageTitle

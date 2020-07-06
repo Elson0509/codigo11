@@ -8049,7 +8049,7 @@ button,
 .app-header.header-text-light .search-wrapper .close::before,
 .app-header.header-text-light .search-wrapper .close::after,
 .app-header.header-text-light .search-wrapper .input-holder .search-icon span::before {
-  background: rgba(255, 255, 255, 0.8); }
+  background: #ffffffcc; }
 .app-header.header-text-light .app-header__logo .logo-src {
   background: url("/src/assets/utils/images/logo.png"); }
 .app-header.header-text-light .app-header__mobile-menu .hamburger-inner,

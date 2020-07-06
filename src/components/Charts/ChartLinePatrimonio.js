@@ -25,7 +25,7 @@ const ChartLinePatrimonio = (props) => {
         let pat_anterior = -1
 
         props.eventos.forEach(el => {
-            if(el.patrimonio != pat_anterior){
+            if(el.patrimonio !== pat_anterior){
                 info.labels.push(revertData(el.data));
                 info.datasets[0].data.push(el.patrimonio.toFixed(2))
                 pat_anterior = el.patrimonio

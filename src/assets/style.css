@@ -18,12 +18,11 @@
 
 .logo-new{
     display: block;
-    text-indent: -9999px;
     width: 150px;
-    height: 30px;
-    background: url("/src/assets/utils/images/logo6.svg");
+    height: 40px;
+    background: url("/img/logo-branco.png");
     margin-left: 10px;
-    background-size: 150px 30px;
+    background-size: 150px 40px;
 }
 
 .card-header-profile-icon{
@@ -32,6 +31,12 @@
     align-content: center;
     text-align: center;
     margin: 0 30px 0 0;    
+}
+
+@media (max-width: 400px) {
+    .card-header-profile-icon{
+        margin: 0;    
+    }
 }
 
 .card-header-profile-title{
@@ -792,17 +797,17 @@
 /****inicio Landing******/
 .logo-login{
     display: block;
-    width: 220px;
-    height: 65px;
-    background: url("/src/assets/utils/images/logo6-inverse.svg");
-    margin-left: 10px;
-    background-size: 220px 65px;
+    width: 260px;
+    height: 80px;
+    background: url("/img/logo-preto.png");
+    margin-left: 0 auto;
+    background-size: 260px 80px;
 }
 
 .logo-landing{
     width: 180px;
     height: 45px;
-    background: url("/src/assets/utils/images/logo6.svg");
+    background: url("/img/logo-branco.png");
     background-size: 180px 45px;
 }
 

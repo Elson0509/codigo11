@@ -27,7 +27,7 @@ const AtvFinTable = (props) => {
                                         <th scope="row">{ind+1}</th>
                                         <td>{atv.emissor}</td>
                                         <td className="text-center">{IntegerNumberBrazilian(atv.qtd)}</td>
-                                        <td>{atv.qtd != 0 && atv.valor != 0 && atv.valor/atv.qtd > 0.0099 ? numberBrazilianMoney(atv.valor/atv.qtd) : "---"}</td>
+                                        <td>{atv.qtd !== 0 && atv.valor !== 0 && atv.valor/atv.qtd > 0.0099 ? numberBrazilianMoney(atv.valor/atv.qtd) : "---"}</td>
                                         <td>{numberBrazilianMoney(atv.valor)}</td>
                                     </tr>
                                 )

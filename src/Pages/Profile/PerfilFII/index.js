@@ -20,7 +20,7 @@ import {
 } from 'reactstrap';
 
 import {
-    ToastContainer,
+
     toast
 } from 'react-toastify';
 
@@ -55,7 +55,7 @@ const PerfilFII = (props) => {
         const token = localStorage.userToken
         if(!!token && !!jwt_decode(token)){
             setNotaUser(newRating)
-            if(newRating ==5)
+            if(newRating==5)
                 toast.warn(`Nota ${newRating} registrada. Você gosta mesmo desse fundo!`, configToast);
             else
                 toast.warn(`Nota ${newRating} registrada. Obrigado!`, configToast);
@@ -97,10 +97,8 @@ const PerfilFII = (props) => {
 
     useEffect(() => {
         const filename = `/profile/${fii}`
-        console.log('filename',filename)
         axios.get(filename)
             .then(res => {
-                console.log(res.data)
                 setDados(res.data)  
                 setSegmento(res.data.segmento)  
                 setAdm(res.data.administrador_fii)  
@@ -112,7 +110,6 @@ const PerfilFII = (props) => {
             })
             .catch(err => {
                 setErrorMessage(err.response.data.message)
-                console.log('Erro', err.response.data.message)
                 setLoading(false)
             })
     },[])
@@ -287,7 +284,7 @@ const PerfilFII = (props) => {
                                         colorText2="dark"
                                     />
                                 </div>}
-                                {dados && dados.valor_tx_adm && <div className="col-md-6 col-xl-4">
+                                {dados && !isNaN(dados.valor_tx_adm) && <div className="col-md-6 col-xl-4">
                                     <SingleCard 
                                         icon="percentage"
                                         bgIcon="malibu-beach" 
@@ -298,7 +295,7 @@ const PerfilFII = (props) => {
                                         colorText2="secondary"
                                     />
                                 </div>}
-                                {dados && dados.custo_tx_por_cota_anual && <div className="col-md-6 col-xl-4">
+                                {dados && !isNaN(dados.custo_tx_por_cota_anual) && <div className="col-md-6 col-xl-4">
                                     <SingleCard 
                                         icon="wallet"
                                         bgIcon="warning" 

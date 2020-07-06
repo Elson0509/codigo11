@@ -2,7 +2,6 @@ import React from 'react';
 import Chart from 'react-apexcharts'
 
 const ChartVolumeNegocios = (props) => {
-    console.log(props)
     const data = {
         series: [{
           //negocios

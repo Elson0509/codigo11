@@ -13,7 +13,6 @@ import AppFooter from '../../Layout/AppFooter';
 
 const Dados = ({match}) => (
     <Fragment>
-        {console.log(match)}
         <AppHeader/>
         <div className="app-main">
             <AppSidebar/>

@@ -1,7 +1,4 @@
 import React from 'react';
-import {
-    Progress
-} from 'reactstrap';
 import AnimatedProgressBar from './AnimatedProgressBar'
 
 const ProgressBox = (props) => {

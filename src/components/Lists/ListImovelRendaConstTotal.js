@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import Icon from '../Icon/Icon'
-import {numberToMetroQuadrado, numberWithPercentual, equivalenciaCamposFutebol, sizeCampoFutebol} from '../../util/Utilities'
+import {numberToMetroQuadrado, equivalenciaCamposFutebol, sizeCampoFutebol} from '../../util/Utilities'
 import {Popover, PopoverHeader, PopoverBody} from 'reactstrap';
-import ProgressBox from '../ProgressBars/ProgressBox';
+
 
 const ListImovelRendaConstTotal = (props) => {
     const [popoverOpen, setPopoverOpen] = useState(false)
@@ -13,7 +13,7 @@ const ListImovelRendaConstTotal = (props) => {
     
     const areaTotal = () => {
         let total = 0;
-        props.imoveis.map(imovel => {
+        props.imoveis.forEach(imovel => {
             total+=imovel.area
         })
         return total
@@ -21,7 +21,7 @@ const ListImovelRendaConstTotal = (props) => {
 
     const qttComCustoEmDia = () =>{
         let qtt=0;
-        props.imoveis.map(imovel => {
+        props.imoveis.forEach(imovel => {
             if(imovel.custo_obra_realizado <= imovel.custo_obra_previsto)
                 qtt++
         })
@@ -30,7 +30,7 @@ const ListImovelRendaConstTotal = (props) => {
 
     const qttConstrucaoEmDia = () =>{
         let qtt=0;
-        props.imoveis.map(imovel => {
+        props.imoveis.forEach(imovel => {
             if(imovel.porc_obra_realizado >= imovel.porc_obra_previsto)
                 qtt++
         })

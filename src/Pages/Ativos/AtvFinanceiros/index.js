@@ -23,13 +23,10 @@ const Index = (props) => {
             .then(res => {
                 setLoading(false)
                 setDados(res.data)
-                console.log(res.data)
             })
             .catch(err => {
                 setLoading(false)
-                setErrorMessage(err.response.data.message || 'Desculpe, mas um erro ocorreu.')
-                console.log('Erro', err.response.data.message)
-                
+                setErrorMessage(err.response.data.message || 'Desculpe, mas um erro ocorreu.') 
             })
     }, [])
 
@@ -91,12 +88,11 @@ const Index = (props) => {
                     transitionAppearTimeout={0}
                     transitionEnter={false}
                     transitionLeave={false}>
-                        {dados && console.log(dados)}
                         {dados && 
                             <Fragment>
                                 <PageTitle
                                     heading={`Ativos financeiros de ${dados.razao_social} (${dados.codigo})`}
-                                    subheading={`Data de referência: ${dados.data_ref}`}
+                                    subheading={``}
                                     icon="file-invoice-dollar"
                                     bgcolor={dados.segmento.bgcolor}
                                     color={dados.segmento.color}

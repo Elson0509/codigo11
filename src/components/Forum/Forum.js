@@ -74,7 +74,6 @@ const Forum = (props) => {
             })
             .catch(err=> {
                 setSpinner(false)
-                console.log(err)
                 setErrorMessage('Algo deu errado.')
             })
         }

@@ -39,7 +39,7 @@ const CardCotacao = (props) => {
                         <div className="widget-subheading">
                             Cotação
                         </div>
-                        {!isNaN(props.cotacao.variacao) && props.cotacao.variacao!=0 &&(
+                        {!isNaN(props.cotacao.variacao) && props.cotacao.variacao &&(
                                 props.cotacao.tipo_variacao ? 
                                 <div className="widget-description text-success variation">
                                     <Icon icon="angle-up" />

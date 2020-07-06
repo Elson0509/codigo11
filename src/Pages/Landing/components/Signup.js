@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import bgmasthead2 from '../../../../src/assets/img/bg-masthead2.jpg'
 
 const Signup = () => {
     return (
-        <section className="call-to-action text-white text-center">
+        <section className="call-to-action text-white text-center" style={{backgroundImage: "url(" + bgmasthead2 + ")", backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
             <div className="overlay"></div>
             <div className="container">
                 <div className="row">

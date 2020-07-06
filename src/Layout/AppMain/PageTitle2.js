@@ -47,7 +47,6 @@ class PageTitle2 extends Component {
 
         return (
             <Card className="mb-3" inverse color={segmento.color || "primary"}>
-                {console.log("this.props", this.props)}
                 <CardHeader className="card-header">
                     <div className="card-header-profile">
                         <div>

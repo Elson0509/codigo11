@@ -106,7 +106,7 @@ const Icon = (props) => {
             <Fragment>
                 <span onClick={props.clicked} id={props.iconId}>
                     {
-                        props.icon.indexOf('lnr-')== 0 || props.icon.indexOf('pe-')== 0 ? 
+                        props.icon.indexOf('lnr-')=== 0 || props.icon.indexOf('pe-')=== 0 ? 
                             <i className={props.icon}/>
                             :
                             <FontAwesomeIcon icon={props.icon}/>

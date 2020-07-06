@@ -28,15 +28,12 @@ const ResetForm = (props) => {
             Axios.post(`/password/reset/${props.match.params.token}`, values)
                 .then(res => {
                     setSuccessMessage(res.data.message)
+                    setErrorMessage('')
                     setButtonText('SENHA RESETADA!')
                 })
                 .catch(err => {
-                    console.log('err',err)
-                    console.log('err.response',err.response)
-                    console.log('err.response.data',err.response.data)
                     setErrorMessage(err.response.data.message || 'Desculpe, mas um erro ocorreu.')
                     setButtonText('RESETAR')
-                    
                 })
         },
         validationSchema

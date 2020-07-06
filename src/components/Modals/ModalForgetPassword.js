@@ -1,5 +1,5 @@
 import React, {useState, Fragment} from 'react';
-import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+import {Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 import axios from '../../util/axios-base'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
@@ -21,7 +21,7 @@ const ModalForgetPassword = (props) => {
             email: ''
         },
         onSubmit: values => {
-            if(buttonSuccessText=='OK'){
+            if(buttonSuccessText==='OK'){
                 props.toggle()
             }
             else{
@@ -35,7 +35,6 @@ const ModalForgetPassword = (props) => {
                     })
                     .catch(err => {
                         setSpinner(false)
-                        console.log(err.response.data.message)
                         setErrorMessage(err.response.data.message || 'Email inválido.')
                     })
             }

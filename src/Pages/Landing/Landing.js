@@ -9,6 +9,8 @@ import IconsGrid from './components/IconsGrid'
 import ImageShowcases from './components/ImageShowcases'
 import Signup from './components/Signup'
 import Footer from './components/Footer'
+import bgmasthead from '../../../src/assets/img/bg-masthead.jpg'
+
 
 const Landing = (props) => {
     const [search, setSearch] = useState('')
@@ -27,7 +29,6 @@ const Landing = (props) => {
                 setDisplay(false)
                 axios.get(`/fii/${removerAcentos(search).replace(' ','_').replace('11B', '').replace('11', '')}`)
                     .then( res => {
-                        console.log(res.data.fiis)
                         setLoading(false)
                         setDisplay(true)
                         setResult(res.data.fiis)
@@ -62,7 +63,7 @@ const Landing = (props) => {
     return (
         <Fragment>
             <Navbar/>
-            <header className="masthead text-white text-center">
+            <header className="masthead text-white text-center" style={{backgroundImage: "url(" + bgmasthead + ")", backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
                 <div className="overlay"></div>
                 <div className="container">
                     <div className="row">
@@ -76,7 +77,7 @@ const Landing = (props) => {
                                 <div ref={wrapperRef} className="col-12 col-md-9 margin-auto">
                                     <input type="text" 
                                         className="form-control form-control-lg" 
-                                        placeholder="Digite o nome ou código do FII..."
+                                        placeholder="Digite nome, código ou segmento (Ex: Shopping)"
                                         onChange={(ev)=> setSearch(ev.target.value)}
                                     />
                                     {loading && <div className="loading-search-landing"><SpinnerSearch/></div>}
