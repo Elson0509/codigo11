@@ -12,25 +12,12 @@ const Discussao = lazy(() => import('../../Pages/Discussao'));
 const Dashboard = lazy(() => import('../../Pages/Dashboard'));
 const Pesquisar = lazy(() => import('../../Pages/Pesquisar'));
 const Profile = lazy(() => import('../../Pages/Profile'));
-const Login = lazy(() => import('../../Pages/Login'));
+
 
 const AppMain = () => {
     return (
         <Fragment>
-            {/* Login */}
-        
-            <Suspense fallback={
-                <div className="loader-container">
-                    <div className="loader-container-inner">
-                        <Loading/> 
-                    </div>
-                </div>
-            }>
-                <Route path="/login" component={Login}/>
-            </Suspense>
-
             {/* Profile */}
-        
             <Suspense fallback={
                 <div className="loader-container">
                     <div className="loader-container-inner">
