@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Icon from '../Icon/Icon'
-import {numberToMetroQuadrado, numberWithPercentual, getLinkMapFromEndereco} from '../../util/Utilities'
 
 const ListSingle = (props) => {
 

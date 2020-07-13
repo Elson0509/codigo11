@@ -87,7 +87,7 @@ const ChartLineImoveisQtt = (props) => {
         const opt = {
             responsive: true,
             title: {
-                display: true,
+                display: false,
                 text: 'Quantidade de imóveis (por tipo)',
                 fontSize: 16
             },
@@ -101,11 +101,26 @@ const ChartLineImoveisQtt = (props) => {
                         }
                 }
             },
+            legend:{
+                labels:{
+                    fontColor: 'red',
+                    fontSize: 10
+                }
+            },
             elements: {
                 line: {
                     fill: false
                 }
             },
+            scales: {
+                xAxes: [{
+                    ticks: {
+                    fontSize: 9,
+                    fontFamily: 'verdana',
+                    fontColor: 'blue',
+                    }
+                }]
+            }
             
         }
         return opt;
@@ -114,7 +129,8 @@ const ChartLineImoveisQtt = (props) => {
     const plugins = [{
         afterDraw: (chartInstance, easing) => {
             const ctx = chartInstance.chart.ctx;
-            ctx.fillText("codigo11.com.br", 10, 10);
+            ctx.fillStyle = "#1E90FF";
+            ctx.fillText("codigo11.com.br", 4, 4);
         }
     }];
 

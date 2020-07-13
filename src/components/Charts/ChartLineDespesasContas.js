@@ -58,7 +58,7 @@ const ChartLineDespesasContas = (props) => {
     const options =  {
         responsive: true,
         title: {
-            display: true,
+            display: false,
             text: 'Taxas e despesas',
             fontSize: 16
         },
@@ -69,8 +69,21 @@ const ChartLineDespesasContas = (props) => {
                         return Number(value).toLocaleString('pt-BR')
                     }
                 }
+            }],
+            xAxes: [{
+                ticks: {
+                fontSize: 9,
+                fontFamily: 'verdana',
+                fontColor: 'blue',
+                }
             }]
-            },
+        },
+        legend:{
+            labels:{
+                fontColor: 'red',
+                fontSize: 10
+            }
+        },
         tooltips: {
             mode: 'label',
             callbacks: {
@@ -89,7 +102,8 @@ const ChartLineDespesasContas = (props) => {
     const plugins = [{
         afterDraw: (chartInstance, easing) => {
             const ctx = chartInstance.chart.ctx;
-            ctx.fillText("codigo11.com.br", 10, 10);
+            ctx.fillStyle = "#1E90FF";
+            ctx.fillText("codigo11.com.br", 4, 4);
         }
     }];
 
@@ -97,7 +111,7 @@ const ChartLineDespesasContas = (props) => {
         props.contas ? 
         <div>
             <Bar data={data()} options={options} plugins={plugins}/>
-            <p className='text-black-50'>* Serviços facultativos: Despesas opcionais com consultoria especializada, empresa especializada em locação e formador de mercado.</p>
+            <small className='text-black-50'>* Serviços facultativos: Despesas opcionais com consultoria especializada, empresa especializada em locação e formador de mercado.</small>
         </div>
         : null
     )

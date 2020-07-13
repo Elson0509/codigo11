@@ -1,4 +1,4 @@
-import React, {useState, memo} from 'react';
+import React, {memo} from 'react';
 import {IntegerNumberBrazilian, numberBrazilianMoney} from '../../util/Utilities'
 import { Fragment } from 'react';
 

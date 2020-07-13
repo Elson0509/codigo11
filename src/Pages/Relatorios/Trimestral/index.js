@@ -64,12 +64,13 @@ const Index = (props) => {
                                     <Fragment>
                                         <div className='row'>
                                             <div className='col-12 mt-4'>
+                                                <h3 className='h6 text-center'>Quantidade de imóveis (por tipo)</h3>
                                                 <ChartLineImoveisQtt imoveis={dados.imoveis_qtd}/>
                                             </div>
                                             <div className='col-12 mt-4'>
+                                                <h3 className='h6 text-center'>% de vacância</h3>
                                                 <ChartLineDataValor 
                                                     label='Vacância' 
-                                                    title='% de vacância'
                                                     valores={formatVacancia()}
                                                     ttsufix='%'
                                                     backgroundColor='#938294'
@@ -80,9 +81,9 @@ const Index = (props) => {
                                                 />
                                             </div>
                                             <div className='col-12 mt-4'>
+                                                <h3 className='h6 text-center'>Valor em ativos financeiros</h3>
                                                 <ChartLineDataValor 
                                                     label='Ativos financeiros' 
-                                                    title='Valor em ativos financeiros'
                                                     valores={dados.atv_fin}
                                                     ttprefix='R$ '
                                                     backgroundColor='#f2c00c'
@@ -94,9 +95,11 @@ const Index = (props) => {
                                                 />
                                             </div>
                                             <div className='col-12 mt-4'>
+                                                <h3 className='h6 text-center'>Receitas (por tipo)</h3>
                                                 <ChartLineReceitas contas={dados.contas}/>
                                             </div>
                                             <div className='col-12 mt-4'>
+                                                <h3 className='h6 text-center'>Taxas e despesas</h3>
                                                 <ChartLineDespesasContas contas={dados.contas}/>
                                             </div>
                                         </div>

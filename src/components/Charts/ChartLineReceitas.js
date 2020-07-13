@@ -58,7 +58,7 @@ const ChartLineReceitas = (props) => {
     const options =  {
         responsive: true,
         title: {
-            display: true,
+            display: false,
             text: 'Receitas (por tipo)',
             fontSize: 16
         },
@@ -69,8 +69,21 @@ const ChartLineReceitas = (props) => {
                         return Number(value).toLocaleString('pt-BR')
                     }
                 }
+            }],
+            xAxes: [{
+                ticks: {
+                fontSize: 9,
+                fontFamily: 'verdana',
+                fontColor: 'blue',
+                }
             }]
-            },
+        },
+        legend:{
+            labels:{
+                fontColor: 'red',
+                fontSize: 10
+            }
+        },
         tooltips: {
             mode: 'label',
             callbacks: {
@@ -87,11 +100,11 @@ const ChartLineReceitas = (props) => {
         
     }
 
-
     const plugins = [{
         afterDraw: (chartInstance, easing) => {
             const ctx = chartInstance.chart.ctx;
-            ctx.fillText("codigo11.com.br", 10, 10);
+            ctx.fillStyle = "#1E90FF";
+            ctx.fillText("codigo11.com.br", 4, 4);
         }
     }];
 

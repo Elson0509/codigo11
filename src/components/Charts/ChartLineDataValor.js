@@ -33,7 +33,8 @@ const ChartLineDataValor = (props) => {
     const plugins = [{
         afterDraw: (chartInstance, easing) => {
             const ctx = chartInstance.chart.ctx;
-            ctx.fillText("codigo11.com.br", 10, 10);
+            ctx.fillStyle = "#1E90FF";
+            ctx.fillText("codigo11.com.br", 4, 4);
         }
     }];
 
@@ -45,6 +46,13 @@ const ChartLineDataValor = (props) => {
                 return Number(value).toLocaleString('pt-BR')
               }
             }
+          }],
+          xAxes: [{
+            ticks: {
+              fontSize: 9,
+              fontFamily: 'verdana',
+              fontColor: 'blue',
+            }
           }]
         },
         title: {
@@ -52,13 +60,18 @@ const ChartLineDataValor = (props) => {
             text: props.title,
             fontSize: 16
         },
+        legend:{
+            labels:{
+                fontColor: 'red',
+                fontSize: 10
+            }
+        },
         tooltips: {
             callbacks: {
                 label: function (tooltipItem, data) {
                         const ttprefix = props.ttprefix || ''
                         const ttsufix = props.ttsufix || ''
                         return `${ttprefix}${Number(tooltipItem.yLabel).toLocaleString('pt-BR')}${ttsufix}`
-
                     }
           }
         }
@@ -67,8 +80,8 @@ const ChartLineDataValor = (props) => {
     return (
         props.valores ? 
             <div>
-                <Line data={data()} plugins={plugins} options={options}/>
-                {props.rodape && <p className='text-black-50'>{`* ${props.rodape}`}</p>}
+                <Line data={data()} plugins={plugins} options={options} />
+                {props.rodape && <small className='text-black-50'>{`* ${props.rodape}`}</small>}
             </div>
              : null
     )

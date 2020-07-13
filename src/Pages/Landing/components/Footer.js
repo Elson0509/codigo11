@@ -42,12 +42,12 @@ const Footer = () => {
                     <div className="col-lg-6 text-center text-lg-right my-auto">
                         <ul className="list-inline mb-0">
                             <li className="list-inline-item mr-3">
-                                <a href="https://www.facebook.com/Codigo11-116946256700529" target="_blank">
+                                <a href="https://www.facebook.com/Codigo11-116946256700529" target="_blank" rel="noopener noreferrer">
                                     <FontAwesomeIcon icon={faFacebook} size="2x"/>
                                 </a>
                             </li>
                             <li className="list-inline-item mr-3">
-                                <a href="https://twitter.com/Codigo114" target="_blank">
+                                <a href="https://twitter.com/Codigo114" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faTwitter} size="2x"/>
                                 </a>
                             </li>
