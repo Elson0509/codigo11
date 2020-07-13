@@ -8,7 +8,7 @@ const ListSearch = (props) => {
         let splithPath = props.location.pathname.split('/')
         splithPath.shift()
         splithPath.shift()
-        return props.match.params.fii ? `/${codigo}/${splithPath.join('/')}` : `/${codigo}/profile`
+        return props.match && props.match.params.fii ? `/${codigo}/${splithPath.join('/')}` : `/${codigo}/profile`
     }
     
     return (

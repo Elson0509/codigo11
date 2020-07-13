@@ -6,6 +6,7 @@ import {removerAcentos} from '../../util/Utilities'
 import ListSearch from '../../components/Lists/ListSearch'
 import SpinnerSearch from '../../components/Loading/SpinnerSearch'
 import IconsGrid from './components/IconsGrid'
+import {withRouter} from 'react-router-dom';
 import ImageShowcases from './components/ImageShowcases'
 import Signup from './components/Signup'
 import Footer from './components/Footer'
@@ -104,4 +105,4 @@ const Landing = (props) => {
     );
 };
 
-export default Landing;
+export default withRouter(Landing);

@@ -1,10 +1,8 @@
-import React, {useState, memo} from 'react';
-import {IntegerNumberBrazilian, numberBrazilianMoney, revertData} from '../../util/Utilities'
+import React, {memo} from 'react';
+import {numberBrazilianMoney, revertData} from '../../util/Utilities'
 import { Fragment } from 'react';
 
 const EventosTable = (props) => {
-    let totalValor = 0;
-
     return (
         <table className="table table-hover table-sm table-striped over">
             <thead className="thead-dark">
