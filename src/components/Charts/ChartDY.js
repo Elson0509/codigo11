@@ -17,7 +17,21 @@ const ChartProventos = (props) => {
                 fill: false
             }
         },
-
+        legend:{
+            labels:{
+                fontColor: 'red',
+                fontSize: 10
+            }
+        },
+        scales: {
+            xAxes: [{
+                ticks: {
+                fontSize: 9,
+                fontFamily: 'verdana',
+                fontColor: 'blue',
+                }
+            }]
+        }
     };
 
     const data = () => {
@@ -44,8 +58,6 @@ const ChartProventos = (props) => {
             ]
         };
 
-        
-
         let prov = [...props.proventos];
         prov.reverse().forEach( val => {
             info.labels.push(val.data_pagamento);
@@ -64,7 +76,8 @@ const ChartProventos = (props) => {
     const plugins = [{
         afterDraw: (chartInstance, easing) => {
             const ctx = chartInstance.chart.ctx;
-            ctx.fillText("codigo11.com.br", 10, 10);
+            ctx.fillStyle = "#1E90FF";
+            ctx.fillText("codigo11.com.br", 4, 4);
         }
     }];
 

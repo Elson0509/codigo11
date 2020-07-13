@@ -46,7 +46,8 @@ const ChartImovelPercReceita = (props) => {
     const plugins = [{
         afterDraw: (chartInstance, easing) => {
             const ctx = chartInstance.chart.ctx;
-            ctx.fillText("codigo11.com.br", 10, 10);
+            ctx.fillStyle = "#1E90FF";
+            ctx.fillText("codigo11.com.br", 4, 10);
         }
     }];
 

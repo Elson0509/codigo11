@@ -30,15 +30,35 @@ const ChartProventos = (props) => {
         return info;
     }
 
+    const options = {
+        responsive: true,
+        legend:{
+            labels:{
+                fontColor: 'red',
+                fontSize: 10
+            }
+        },
+        scales: {
+            xAxes: [{
+                ticks: {
+                fontSize: 9,
+                fontFamily: 'verdana',
+                fontColor: 'blue',
+                }
+            }]
+        }
+    }
+
     const plugins = [{
         afterDraw: (chartInstance, easing) => {
             const ctx = chartInstance.chart.ctx;
-            ctx.fillText("codigo11.com.br", 10, 10);
+            ctx.fillStyle = "#1E90FF";
+            ctx.fillText("codigo11.com.br", 4, 4);
         }
     }];
 
     return (
-        props.proventos && props.proventos.length > 0 ? <Bar data={data()} plugins={plugins}/> : null
+        props.proventos && props.proventos.length > 0 ? <Bar data={data()} options={options} plugins={plugins}/> : null
     )
 };
 
