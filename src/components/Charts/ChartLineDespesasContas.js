@@ -111,7 +111,7 @@ const ChartLineDespesasContas = (props) => {
         props.contas ? 
         <div>
             <Bar data={data()} options={options} plugins={plugins}/>
-            <small className='text-black-50'>* Serviços facultativos: Despesas opcionais com consultoria especializada, empresa especializada em locação e formador de mercado.</small>
+            <small className='text-black'>* Serviços facultativos: Despesas opcionais com consultoria especializada, empresa especializada em locação e formador de mercado.</small>
         </div>
         : null
     )

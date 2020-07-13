@@ -73,6 +73,7 @@ class AppMobileMenu extends React.Component {
                         <Button size="sm"
                                 className={cx("btn-icon btn-icon-only", {active: this.state.activeSecondaryMenuMobile})}
                                 color="primary"
+                                aria-label='menu-right'
                                 onClick={() => this.setState({activeSecondaryMenuMobile: !this.state.activeSecondaryMenuMobile})}>
                             <div className="btn-icon-wrapper"><FontAwesomeIcon icon={faEllipsisV}/></div>
                         </Button>

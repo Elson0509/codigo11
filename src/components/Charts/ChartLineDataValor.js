@@ -81,7 +81,7 @@ const ChartLineDataValor = (props) => {
         props.valores ? 
             <div>
                 <Line data={data()} plugins={plugins} options={options} />
-                {props.rodape && <small className='text-black-50'>{`* ${props.rodape}`}</small>}
+                {props.rodape && <small className='text-black'>{`* ${props.rodape}`}</small>}
             </div>
              : null
     )
