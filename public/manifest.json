@@ -8,7 +8,8 @@
       "purpose": "any"
     }
   ],
-  "start_url": "https://codigo11.com.br",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "theme_color": "#46AEF7",
   "background_color": "#46AEF7"

@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import registerServiceWorker from './registerServiceWorker';
-import { unregister } from './registerServiceWorker';
-
+import * as serviceWorker from './serviceWorker';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import './assets/base.css';
 import './assets/style.css';
@@ -41,7 +39,6 @@ if (module.hot) {
     renderApp(NextApp);
   });
 }
-unregister();
 
-// registerServiceWorker();
+serviceWorker.register();
 
