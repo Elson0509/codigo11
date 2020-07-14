@@ -76,18 +76,23 @@ export const valueToRes = (value) => {
 
 export const saudacaoHorario = () => {
  	const stamp = new Date();
- 	const hours = stamp.getHours();
- 	if (hours >= 18 && hours <24) {
+     const hours = stamp.getHours();
+     if (hours>=0 && hours<6) {
+        return "Boa Madrugada";
+    }
+    
+    if (hours>=6 && hours<12) {
+        return "Bom Dia";
+    }
+
+    if (hours>=12 && hours<18) {
+        return "Boa Tarde";
+    }
+
+ 	if (hours>=18 && hours<24) {
  		return "Boa Noite";
- 	}
+ 	}     
  	
- 	if (hours >= 12 && hours <18) {
- 		return "Boa Tarde";
- 	}
- 	
- 	if (hours >= 0 && hours <12) {
- 		return "Bom Dia";
- 	}
 	return 'Bom Dia'
 }
 

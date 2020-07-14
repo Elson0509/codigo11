@@ -2,14 +2,9 @@ import React, {Fragment, Suspense, lazy} from 'react';
 import {connect} from 'react-redux';
 import cx from 'classnames';
 import {withRouter, Route} from 'react-router-dom';
-
 import ResizeDetector from 'react-resize-detector';
-
 import Loading from '../../components/Loading/Loading'
-
 const AppMainLazy = lazy(() => import('../../Layout/AppMain'));
-const LoginLazy = lazy(() => import('../Login'));
-
 
 class Main extends React.Component {
     constructor(props) {
@@ -38,16 +33,6 @@ class Main extends React.Component {
 
         return (
             <Fragment>
-                {/* Login */}
-                <Suspense fallback={
-                        <div className="loader-container">
-                            <div className="loader-container-inner">
-                                <Loading/> 
-                            </div>
-                        </div>
-                    }>
-                    <Route path="/login" component={LoginLazy}/>
-                </Suspense>
                 <div className={cx(
                     "app-container app-theme-" + colorScheme,
                     {'fixed-header': enableFixedHeader},

@@ -8,10 +8,9 @@ import Main from './Pages/Main';
 import configureStore from './config/configureStore';
 import { Provider } from 'react-redux';
 import Landing from './Pages/Landing/Landing'
+import Login from './Pages/Login'
 const store = configureStore();
 const rootElement = document.getElementById('root');
-
-
 
 const renderApp = Component => {
   ReactDOM.render(
@@ -21,6 +20,7 @@ const renderApp = Component => {
           <Route exact path="/">
             <Landing/>
           </Route>
+          <Route path="/login" component={Login}/>
           <Component />
         </Switch>
       </HashRouter>
