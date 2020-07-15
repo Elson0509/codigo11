@@ -233,6 +233,46 @@
     }
 }
 
+/****** CardFavoritoCollapse******/
+.dialog-enter {
+    opacity: 0.01;
+    transform: scale(0.5);
+}
+  
+.dialog-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 500ms;
+}
+  
+.dialog-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+  
+.dialog-exit-active {
+    opacity: 0.01;
+    transform: scale(0.3);
+    transition: all 500ms;
+}
+
+.card-fav-collapse{
+    display: flex;
+    justify-content: flex-start;
+    position: relative;  
+}
+
+.text-card-fav{
+    flex: 0 1 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.icon-right{
+    margin-left: auto;
+}
+
 /****** Search******/
 .search-list{
     max-height: 500px;

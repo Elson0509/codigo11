@@ -4,6 +4,7 @@ import axios from '../../../util/axios-base';
 import Icon from '../../../components/Icon/Icon'
 import CardQuotation from '../../../components/Cards/CardQuotation'
 import CardFavorito from '../../../components/Cards/CardFavorito'
+import CardFavoritoCollapse from '../../../components/Cards/CardFavoritoCollapse'
 import {userId} from '../../../util/UserFunctions'
 import {saudacaoHorario} from '../../../util/Utilities'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
@@ -61,11 +62,14 @@ const Index = (props) => {
                                     color={'dark'}
                                 />
                                 <CardQuotation frase={dados.frase}/>
+                                {/* <div className="col-lg-6 col-sm-12">
+                                    <CardFavoritoCollapse favorito={dados.favoritos[0]}/>
+                                </div> */}
                                 {dados.favoritos.length > 0 ?
                                     <div className="row">
                                         {dados.favoritos.map((el, ind) => {
                                             return <div className="col-lg-6 col-sm-12" key={`fav${ind}`}>
-                                                        <CardFavorito favorito={el}/>
+                                                        <CardFavoritoCollapse favorito={el}/>
                                                     </div>
                                         })}
                                     </div>
