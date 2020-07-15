@@ -3,7 +3,7 @@ export const Profile = (fii) => [
     {
         icon: 'lnr-license',
         label: 'Perfil',
-        to: '#/'+fii+'/profile'
+        to: '/'+fii+'/profile'
     }
 ];
 export const Info = (fii) => [
@@ -13,20 +13,20 @@ export const Info = (fii) => [
         content: [
             {
                 label: 'Físicos',
-                to: '#/'+fii+'/ativos/fisicos',
+                to: '/'+fii+'/ativos/fisicos',
             },
             {
                 label: 'Financeiros',
-                to: '#/'+fii+'/ativos/financeiros',
+                to: '/'+fii+'/ativos/financeiros',
 
             },
             {
                 label: 'Consolidado',
-                to: '#/'+fii+'/ativos/consolidado',
+                to: '/'+fii+'/ativos/consolidado',
             },
             {
                 label: 'Aquisições/Alienações',
-                to: '#/'+fii+'/ativos/aquisicoes',
+                to: '/'+fii+'/ativos/aquisicoes',
             }
         ]
     },
@@ -36,19 +36,19 @@ export const Info = (fii) => [
         content: [
             {
                 label: 'Fundamentos',
-                to: '#/'+fii+'/dados/fundamentos',
+                to: '/'+fii+'/dados/fundamentos',
             },
             {
                 label: 'Aluguéis',
-                to: '#/'+fii+'/dados/alugueis',
+                to: '/'+fii+'/dados/alugueis',
             },
             {
                 label: 'Simulação de investimento',
-                to: '#/'+fii+'/dados/simulacao',
+                to: '/'+fii+'/dados/simulacao',
             },
             {
                 label: 'Cotações',
-                to: '#/'+fii+'/dados/cotacoes',
+                to: '/'+fii+'/dados/cotacoes',
             }
         ]
     },
@@ -58,15 +58,15 @@ export const Info = (fii) => [
         content: [
             {
                 label: 'Mensal',
-                to: '#/'+fii+'/relatorios/mensal',
+                to: '/'+fii+'/relatorios/mensal',
             },
             {
                 label: 'Trimestral',
-                to: '#/'+fii+'/relatorios/trimestral',
+                to: '/'+fii+'/relatorios/trimestral',
             },
             {
                 label: 'Gerencial',
-                to: '#/'+fii+'/relatorios/gerencial',
+                to: '/'+fii+'/relatorios/gerencial',
             },
         ]
     }
@@ -76,7 +76,7 @@ export const Discussao = (fii) => [
     {
         icon: 'pe-7s-chat',
         label: 'Discussão',
-        to: '#/'+fii+'/discussao'
+        to: '/'+fii+'/discussao'
     }
 ];
 
@@ -84,11 +84,11 @@ export const Inicio = [
     {
         icon: 'pe-7s-graph2',
         label: 'Dashboard',
-        to: '#/dashboard'
+        to: '/dashboard'
     },
     {
         icon: 'pe-7s-search',
         label: 'Pesquisar',
-        to: '#/pesquisar'
+        to: '/pesquisar'
     }
 ];

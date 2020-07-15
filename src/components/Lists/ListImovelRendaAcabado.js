@@ -21,10 +21,6 @@ const ListImovelRendaAcabado = (props) => {
                 <span className="enfase">Endereço: <a target="_blank" rel="noopener noreferrer" href={getLinkMapFromEndereco(props.imovel.endereco)}><Icon icon="map-marked-alt"/></a> </span>
                 {props.imovel.endereco}
             </li>}
-            {typeof (props.imovel.porc_rec_fii) != "undefined" && <li className="list-group-item">
-                <span className="enfase">Percentual na receita: </span>
-                {numberWithPercentual(props.imovel.porc_rec_fii)}
-            </li>}
             {typeof (props.imovel.area) != "undefined"  && <li className="list-group-item">
                 <span className="enfase">Área: </span>
                 {numberToMetroQuadrado(props.imovel.area)}
@@ -32,17 +28,6 @@ const ListImovelRendaAcabado = (props) => {
             {typeof (props.imovel.unidades) != "undefined"  && <li className="list-group-item">
                 <span className="enfase">Unidades: </span>
                 {numberWithDots(props.imovel.unidades)}
-            </li>}
-            {typeof (props.imovel.vacancia) != "undefined"  && <li className="list-group-item">
-                <ProgressBox 
-                    color={props.bgNumber}
-                    comment={`Vacância: ${numberWithPercentual(props.imovel.vacancia)}`}
-                    value={props.imovel.vacancia}
-                />                
-            </li>}
-            {typeof (props.imovel.inadimplencia) != "undefined" && <li className="list-group-item">
-                <span className="enfase">Inadimplência: </span>
-                {numberWithPercentual(props.imovel.inadimplencia)}
             </li>}
             {props.imovel.caracteristica && <li className="list-group-item text-center">
                 <button className={`mb-2 mr-2 btn btn-${props.bgNumber}`} id={`${props.tipo}${props.order}`} onClick={toggle}>Caracteríticas</button>

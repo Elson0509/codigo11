@@ -191,7 +191,7 @@ const Index = (props) => {
                                     {dados.renda_construcao.length > 0 && 
                                     <Fragment>
                                         <div className="card-footer"/>
-                                        <Row className="">
+                                        <Row className="justify-content-center">
                                             <Col className="col-sm-12 col-lg-6">
                                                 <GeneralCard title="Imóveis por área" titleStyle="text-center">
                                                     <ChartImovelArea imoveis={dados.renda_construcao} type="Imóvel"/>
@@ -231,7 +231,7 @@ const Index = (props) => {
                                     {dados.venda_acabado.length > 0 && 
                                     <Fragment>
                                         <div className="card-footer"/>
-                                        <Row className="">
+                                        <Row className="justify-content-center">
                                             <Col className="col-sm-12 col-lg-6">
                                                 <GeneralCard title="Imóveis por área" titleStyle="text-center">
                                                     <ChartImovelArea imoveis={dados.venda_acabado} type="Imóvel"/>
@@ -272,7 +272,7 @@ const Index = (props) => {
                                     {dados.venda_construcao.length > 0 && 
                                     <Fragment>
                                         <div className="card-footer"/>
-                                        <Row className="">
+                                        <Row className="justify-content-center">
                                             <Col className="col-sm-12 col-lg-6">
                                                 <GeneralCard title="Imóveis por área" titleStyle="text-center">
                                                     <ChartImovelArea imoveis={dados.venda_construcao} type="Imóvel"/>

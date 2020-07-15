@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './assets/base.css';
 import './assets/style.css';
 import Main from './Pages/Main';
@@ -15,7 +15,7 @@ const rootElement = document.getElementById('root');
 const renderApp = Component => {
   ReactDOM.render(
     <Provider store={store}>
-      <HashRouter>
+      <BrowserRouter>
         <Switch>
           <Route exact path="/">
             <Landing/>
@@ -23,7 +23,7 @@ const renderApp = Component => {
           <Route path="/login" component={Login}/>
           <Component />
         </Switch>
-      </HashRouter>
+      </BrowserRouter>
     </Provider>,
     rootElement
   );
