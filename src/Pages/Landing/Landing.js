@@ -65,8 +65,8 @@ const Landing = (props) => {
     return (
         <Fragment>
             <Helmet>
-                <meta name="description" content="Codigo11 - Análise e informações grátis sobre Fundos de Investimento Imobiliário - FII" />
-                <title>Codigo11 - Análise e informações gratuitas sobre FIIs</title>
+                <meta name="description" content="Codigo11 - Análise e informações grátis sobre investimento em Fundos Imobiliários - FII" />
+                <title>Codigo11 - Análise e informações sobre investimento em FIIs</title>
             </Helmet>
             <Navbar/>
             <header className="masthead text-white text-center" style={{backgroundImage: "url(" + bgmasthead + ")", backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>

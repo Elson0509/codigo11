@@ -6,6 +6,7 @@ import Loading from '../../../components/Loading/Loading'
 import Tabs from 'react-responsive-tabs';
 import Forum from '../../../components/Forum/Forum'
 import {Helmet} from 'react-helmet'
+import Adsense from '../../../components/Ads/Adsense'
 
 const Index = (props) => {
     const [dados, setDados] = useState()
@@ -112,6 +113,7 @@ const Index = (props) => {
                             </div>
                         }
                 </ReactCSSTransitionGroup>
+                <Adsense/>
         </Fragment>
     );
 };

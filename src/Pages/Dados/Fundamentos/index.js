@@ -10,6 +10,7 @@ import CardImoveis from '../../../components/Cards/CardImoveis'
 import CardAtvFin from '../../../components/Cards/CardAtvFin'
 import CardIndicadores from '../../../components/Cards/CardIndicadores'
 import {Helmet} from 'react-helmet'
+import Adsense from '../../../components/Ads/Adsense'
 
 import {
     Row
@@ -76,7 +77,7 @@ const Index = (props) => {
                             </div>
                         }
                 </ReactCSSTransitionGroup>
-
+            <Adsense/>
         </Fragment>
     );
 };

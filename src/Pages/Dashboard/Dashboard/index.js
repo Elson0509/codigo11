@@ -10,6 +10,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Loading from '../../../components/Loading/Loading'
 import {Link} from 'react-router-dom';
 import {Helmet} from 'react-helmet'
+import Adsense from '../../../components/Ads/Adsense'
 
 const Index = (props) => {
     const [dados, setDados] = useState()
@@ -102,6 +103,7 @@ const Index = (props) => {
                     </div>
                 </Link>
             }
+            <Adsense/>
         </Fragment>
     );
 };

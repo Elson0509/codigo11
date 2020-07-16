@@ -15,6 +15,7 @@ import {valueToRes, numberWithDots, numberWithPercentual, numberWithVirgula, num
 import Loading from '../../../components/Loading/Loading'
 import jwt_decode from 'jwt-decode'
 import {Helmet} from 'react-helmet'
+import Adsense from '../../../components/Ads/Adsense'
 
 import {
     Row, Col,
@@ -110,7 +111,8 @@ const PerfilFII = (props) => {
                 setLoading(false)
             })
             .catch(err => {
-                setErrorMessage(err.response.data.message)
+                setErrorMessage('Ops, algo deu errado. Favor, reinicie a página.')
+                //setErrorMessage(err.response.data.message)
                 setLoading(false)
             })
     },[])
@@ -378,6 +380,7 @@ const PerfilFII = (props) => {
                     </div>
                 }
             </ReactCSSTransitionGroup>
+            <Adsense/>
         </Fragment>
     );
 };

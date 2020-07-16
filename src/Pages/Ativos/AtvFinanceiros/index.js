@@ -7,6 +7,7 @@ import GeneralCard from '../../../components/Cards/GeneralCard'
 import ChartPieAtvFin from '../../../components/Charts/ChartPieAtvFin'
 import Loading from '../../../components/Loading/Loading'
 import {Helmet} from 'react-helmet'
+import Adsense from '../../../components/Ads/Adsense'
 
 import {
     Col,
@@ -120,6 +121,7 @@ const Index = (props) => {
                     <p>{errorMessage}</p>
                 </div>
             }
+            <Adsense/>
         </Fragment>
     );
 };

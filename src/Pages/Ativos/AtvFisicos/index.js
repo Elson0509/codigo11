@@ -17,6 +17,7 @@ import ListSingle from '../../../components/Lists/ListSingle';
 import VerctorMap from '../../../components/Map/VectorMap'
 import Loading from '../../../components/Loading/Loading'
 import {Helmet} from 'react-helmet'
+import Adsense from '../../../components/Ads/Adsense'
 
 import {
     Row, Col,
@@ -317,6 +318,7 @@ const Index = (props) => {
                     <p>{errorMessage}</p>
                 </div>
             }
+            <Adsense/>
         </Fragment>
     );
 };

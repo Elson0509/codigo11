@@ -6,6 +6,7 @@ import Loading from '../../../components/Loading/Loading'
 import {revertData} from '../../../util/Utilities'
 import {Helmet} from 'react-helmet'
 import CardListRelatorios from '../../Profile/PerfilFII/Cards/CardListRelatorios'
+import Adsense from '../../../components/Ads/Adsense'
 
 const Index = (props) => {
     const [dados, setDados] = useState()
@@ -76,6 +77,7 @@ const Index = (props) => {
                     <p>{errorMessage}</p>
                 </div>
             }
+            <Adsense/>
         </Fragment>
     );
 };

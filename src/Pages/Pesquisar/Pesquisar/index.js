@@ -8,6 +8,7 @@ import {Button, ButtonGroup, Card, Input, CardTitle} from 'reactstrap';
 import { numberBrazilianMoney } from '../../../util/Utilities'
 import LoadingAdvancedSearch from '../../../components/Loading/LoadingAdvancedSearch'
 import SearchTable from '../../../components/Tables/SearchTable'
+import Adsense from '../../../components/Ads/Adsense'
 
 const Index = (props) => {
     const [result, setResult] = useState()
@@ -332,6 +333,7 @@ const Index = (props) => {
                     <p>{errorMessage}</p>
                 </div>
             }
+            <Adsense/>
         </Fragment>
     );
 };
