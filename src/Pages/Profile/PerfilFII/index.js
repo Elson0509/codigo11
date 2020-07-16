@@ -14,6 +14,7 @@ import CardListRelatorios from './Cards/CardListRelatorios';
 import {valueToRes, numberWithDots, numberWithPercentual, numberWithVirgula, numberToMoney} from '../../../util/Utilities'
 import Loading from '../../../components/Loading/Loading'
 import jwt_decode from 'jwt-decode'
+import {Helmet} from 'react-helmet'
 
 import {
     Row, Col,
@@ -160,6 +161,10 @@ const PerfilFII = (props) => {
 
     return (
         <Fragment>
+            <Helmet>
+                <meta name="description" content={`Codigo11 - ${fii}11 - Perfil e informações gerais relevantes do Fundo imobiliário`} />
+                <title>{`Codigo11: ${fii}11 - Perfil de FII`}</title>
+            </Helmet>
             <ReactCSSTransitionGroup
                 component="div"
                 transitionName="TabsAnimation"

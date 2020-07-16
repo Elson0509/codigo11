@@ -4,6 +4,7 @@ import axios from '../../../util/axios-base';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Loading from '../../../components/Loading/Loading'
 import ChartLineDataValor from '../../../components/Charts/ChartLineDataValor'
+import {Helmet} from 'react-helmet'
 
 const Index = (props) => {
     const [dados, setDados] = useState()
@@ -68,6 +69,10 @@ const Index = (props) => {
 
     return (
         <Fragment>
+            <Helmet>
+                <meta name="description" content={`Codigo11 - ${fii}11 - Relatório de Informações Mensais do Fundo Imobiliário (FII)`} />
+                <title>{`Codigo11: ${fii}11 - Relatório de Informações Mensais`}</title>
+            </Helmet>
             {!errorMessage && dados &&
                 <ReactCSSTransitionGroup
                     component="div"

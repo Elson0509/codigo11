@@ -5,6 +5,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Loading from '../../../components/Loading/Loading'
 import Tabs from 'react-responsive-tabs';
 import Forum from '../../../components/Forum/Forum'
+import {Helmet} from 'react-helmet'
 
 const Index = (props) => {
     const [dados, setDados] = useState()
@@ -74,6 +75,10 @@ const Index = (props) => {
 
     return (
         <Fragment>
+                <Helmet>
+                    <meta name="description" content={`Codigo11 - ${fii}11 - Fórum de discussão do Fundo Imobiliário (FII)`} />
+                    <title>{`Codigo11: ${fii}11 - Fórum de discussão`}</title>
+                </Helmet>
                 <ReactCSSTransitionGroup
                     component="div"
                     transitionName="TabsAnimation"

@@ -16,6 +16,7 @@ import ListCaracContr from '../../../components/Lists/ListCaracContr';
 import ListSingle from '../../../components/Lists/ListSingle';
 import VerctorMap from '../../../components/Map/VectorMap'
 import Loading from '../../../components/Loading/Loading'
+import {Helmet} from 'react-helmet'
 
 import {
     Row, Col,
@@ -27,8 +28,9 @@ const Index = (props) => {
     const [errorMessage, setErrorMessage] = useState("")
     const [loading, setLoading] = useState(true)
 
+    const fii = props.match.params.fii
+
     useEffect(() => {
-        const fii = props.match.params.fii
         const path = `/ativos/fis/${fii}`
         axios.get(path)
             .then(res => {
@@ -45,6 +47,10 @@ const Index = (props) => {
 
     return (
         <Fragment>
+            <Helmet>
+                <meta name="description" content={`Codigo11 - ${fii}11 - Informações de ativos físicos do FII`} />
+                <title>{`Codigo11: ${fii}11 - Ativos físicos do FII`}</title>
+            </Helmet>
             {!errorMessage && dados && 
                 <ReactCSSTransitionGroup
                     component="div"

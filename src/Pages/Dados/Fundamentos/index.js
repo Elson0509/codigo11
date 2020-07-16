@@ -9,6 +9,7 @@ import CardCotacao from '../../../components/Cards/CardCotacao'
 import CardImoveis from '../../../components/Cards/CardImoveis'
 import CardAtvFin from '../../../components/Cards/CardAtvFin'
 import CardIndicadores from '../../../components/Cards/CardIndicadores'
+import {Helmet} from 'react-helmet'
 
 import {
     Row
@@ -20,8 +21,9 @@ const Index = (props) => {
     const [loading, setLoading] = useState(true)
     const [errorMessage, setErrorMessage] = useState("")
 
+    const fii = props.match.params.fii
+
     useEffect(() => {
-        const fii = props.match.params.fii
         const path = `/dados/fundamentos/${fii}`
         axios.get(path)
             .then(res => {
@@ -37,6 +39,10 @@ const Index = (props) => {
 
     return (
         <Fragment>
+                <Helmet>
+                    <meta name="description" content={`Codigo11 - ${fii}11 - Tabela de informações com fundamentos do FII`} />
+                    <title>{`Codigo11: ${fii}11 - Tabelas de Fundamentos do FII`}</title>
+                </Helmet>
                 <ReactCSSTransitionGroup
                     component="div"
                     transitionName="TabsAnimation"

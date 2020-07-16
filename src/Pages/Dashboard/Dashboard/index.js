@@ -3,13 +3,13 @@ import PageTitle from '../../../Layout/AppMain/PageTitleBase';
 import axios from '../../../util/axios-base';
 import Icon from '../../../components/Icon/Icon'
 import CardQuotation from '../../../components/Cards/CardQuotation'
-import CardFavorito from '../../../components/Cards/CardFavorito'
 import CardFavoritoCollapse from '../../../components/Cards/CardFavoritoCollapse'
 import {userId} from '../../../util/UserFunctions'
 import {saudacaoHorario} from '../../../util/Utilities'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Loading from '../../../components/Loading/Loading'
 import {Link} from 'react-router-dom';
+import {Helmet} from 'react-helmet'
 
 const Index = (props) => {
     const [dados, setDados] = useState()
@@ -44,6 +44,10 @@ const Index = (props) => {
 
     return (
         <Fragment>
+            <Helmet>
+                <meta name="description" content={`Codigo11 - Dashboard de usuário com lista de FIIs favoritos`} />
+                <title>{`Codigo11: Dashboard de usuário`}</title>
+            </Helmet>
             {!errorMessage && dados &&
                 <ReactCSSTransitionGroup
                     component="div"

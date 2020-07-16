@@ -6,6 +6,7 @@ import AtvFinTable from '../../../components/Tables/AtvFinTable'
 import GeneralCard from '../../../components/Cards/GeneralCard'
 import ChartPieAtvFin from '../../../components/Charts/ChartPieAtvFin'
 import Loading from '../../../components/Loading/Loading'
+import {Helmet} from 'react-helmet'
 
 import {
     Col,
@@ -16,8 +17,9 @@ const Index = (props) => {
     const [loading, setLoading] = useState(true)
     const [errorMessage, setErrorMessage] = useState("")
 
+    const fii = props.match.params.fii
+
     useEffect(() => {
-        const fii = props.match.params.fii
         const path = `/ativos/fin/${fii}`
         axios.get(path)
             .then(res => {
@@ -80,6 +82,10 @@ const Index = (props) => {
 
     return (
         <Fragment>
+            <Helmet>
+                <meta name="description" content={`Codigo11 - ${fii}11 - Informações de ativos financeiros do FII`} />
+                <title>{`Codigo11: ${fii}11 - Ativos financeiros do FII`}</title>
+            </Helmet>
             {dados && 
                 <ReactCSSTransitionGroup
                     component="div"

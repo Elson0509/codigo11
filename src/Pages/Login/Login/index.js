@@ -4,6 +4,7 @@ import SignupForm from './SignupForm/SignupForm'
 import Tabs from 'react-responsive-tabs';
 import { withRouter, Link } from 'react-router-dom';
 import ModalForgetPassword from '../../../components/Modals/ModalForgetPassword'
+import {Helmet} from 'react-helmet'
 
 const Index = (props) => {
     const [modal, setModal] = useState(false)
@@ -39,6 +40,10 @@ const Index = (props) => {
 
     return (
         <Fragment>
+            <Helmet>
+                <meta name="description" content={`Codigo11 - Realização de Login ou crição de conta na plataforma`} />
+                <title>{`Codigo11: Login e criação de conta`}</title>
+            </Helmet>
             <ModalForgetPassword modal={modal} toggle={setModalHandler}/>
         
             <div className='loginPanel'>

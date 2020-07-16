@@ -6,14 +6,16 @@ import Loading from '../../../components/Loading/Loading'
 import ChartProventos from '../../../components/Charts/ChartProventos'
 import ChartDY from '../../../components/Charts/ChartDY'
 import CardProventos from '../../../components/Cards/CardProventos'
+import {Helmet} from 'react-helmet'
 
 const Index = (props) => {
     const [dados, setDados] = useState()
     const [loading, setLoading] = useState(true)
     const [errorMessage, setErrorMessage] = useState("")
 
+    const fii = props.match.params.fii
+
     useEffect(() => {
-        const fii = props.match.params.fii
         const path = `/dados/alugueis/${fii}`
         axios.get(path)
             .then(res => {
@@ -29,6 +31,10 @@ const Index = (props) => {
 
     return (
         <Fragment>
+                <Helmet>
+                    <meta name="description" content={`Codigo11 - ${fii}11 - Dados históricos de aluguéis e amortizações do FII`} />
+                    <title>{`Codigo11: ${fii}11 - Aluguéis históricos do FII`}</title>
+                </Helmet>
                 <ReactCSSTransitionGroup
                     component="div"
                     transitionName="TabsAnimation"

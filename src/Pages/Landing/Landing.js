@@ -1,5 +1,5 @@
 import React, {Fragment, useState, useEffect, useRef} from 'react';
-import '../../assets/landing-page.min.css'
+import  '../../assets/landing-page.min.css'
 import axios from '../../util/axios-base'
 import Navbar from './components/Navbar'
 import {removerAcentos} from '../../util/Utilities'
@@ -10,6 +10,7 @@ import {withRouter} from 'react-router-dom';
 import ImageShowcases from './components/ImageShowcases'
 import Signup from './components/Signup'
 import Footer from './components/Footer'
+import {Helmet} from 'react-helmet'
 import bgmasthead from '../../../src/assets/img/bg-masthead.jpg'
 
 
@@ -63,6 +64,10 @@ const Landing = (props) => {
 
     return (
         <Fragment>
+            <Helmet>
+                <meta name="description" content="Codigo11 - Análise e informações grátis sobre Fundos de Investimento Imobiliário - FII" />
+                <title>Codigo11 - Análise e informações gratuitas sobre FIIs</title>
+            </Helmet>
             <Navbar/>
             <header className="masthead text-white text-center" style={{backgroundImage: "url(" + bgmasthead + ")", backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}}>
                 <div className="overlay"></div>

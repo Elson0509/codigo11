@@ -4,14 +4,16 @@ import axios from '../../../util/axios-base';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import TimelineOperations from '../../../components/Timelines/TimelineOperations'
 import Loading from '../../../components/Loading/Loading'
+import {Helmet} from 'react-helmet'
 
 const Index = (props) => {
     const [dados, setDados] = useState()
     const [loading, setLoading] = useState(true)
     const [errorMessage, setErrorMessage] = useState("")
 
+    const fii = props.match.params.fii
+
     useEffect(() => {
-        const fii = props.match.params.fii
         const path = `/ativos/aquiali/${fii}`
         axios.get(path)
             .then(res => {
@@ -27,6 +29,10 @@ const Index = (props) => {
 
     return (
         <Fragment>
+            <Helmet>
+                <meta name="description" content={`Codigo11 - ${fii}11 - Aquisições e alienações históricas do Fundo imobiliário (FII).`} />
+                <title>{`Codigo11: ${fii}11 - Aquisições e alienações do FII`}</title>
+            </Helmet>
             {!errorMessage && dados &&
                 <ReactCSSTransitionGroup
                     component="div"

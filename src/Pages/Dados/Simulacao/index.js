@@ -14,6 +14,7 @@ import ChartLineBarProventos from '../../../components/Charts/ChartLineBarProven
 import ChartLinePrecoPrecoMedio from '../../../components/Charts/ChartLinePrecoPrecoMedio'
 import EventosTable from '../../../components/Tables/EventosTable'
 import {userId} from '../../../util/UserFunctions'
+import {Helmet} from 'react-helmet'
 
 const Index = (props) => {
     const [dados, setDados] = useState()
@@ -128,6 +129,10 @@ const Index = (props) => {
 
     return (
         <Fragment>
+                <Helmet>
+                    <meta name="description" content={`Codigo11 - ${fii}11 - Simulador de investimento contínuo e periódico do FII`} />
+                    <title>{`Codigo11: ${fii}11 - Simulação de investimento constante`}</title>
+                </Helmet>
                 <ReactCSSTransitionGroup
                     component="div"
                     transitionName="TabsAnimation"

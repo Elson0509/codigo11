@@ -7,6 +7,7 @@ import ChartLineImoveisQtt from '../../../components/Charts/ChartLineImoveisQtt'
 import ChartLineDataValor from '../../../components/Charts/ChartLineDataValor'
 import ChartLineReceitas from '../../../components/Charts/ChartLineReceitas'
 import ChartLineDespesasContas from '../../../components/Charts/ChartLineDespesasContas'
+import {Helmet} from 'react-helmet'
 
 const Index = (props) => {
     const [dados, setDados] = useState()
@@ -39,6 +40,10 @@ const Index = (props) => {
 
     return (
         <Fragment>
+            <Helmet>
+                <meta name="description" content={`Codigo11 - ${fii}11 - Relatório de Informações trimestrais do Fundo Imobiliário (FII)`} />
+                <title>{`Codigo11: ${fii}11 - Relatório de Informações trimestrais`}</title>
+            </Helmet>
             {!errorMessage && dados &&
                 <ReactCSSTransitionGroup
                     component="div"

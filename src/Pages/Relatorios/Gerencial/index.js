@@ -4,7 +4,7 @@ import axios from '../../../util/axios-base';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Loading from '../../../components/Loading/Loading'
 import {revertData} from '../../../util/Utilities'
-
+import {Helmet} from 'react-helmet'
 import CardListRelatorios from '../../Profile/PerfilFII/Cards/CardListRelatorios'
 
 const Index = (props) => {
@@ -42,6 +42,10 @@ const Index = (props) => {
 
     return (
         <Fragment>
+            <Helmet>
+                <meta name="description" content={`Codigo11 - ${fii}11 - Lista de Relatórios Gerenciais do Fundo Imobiliário (FII)`} />
+                <title>{`Codigo11: ${fii}11 - Lista de Relatórios Gerenciais`}</title>
+            </Helmet>
             {!errorMessage && dados &&
                 <ReactCSSTransitionGroup
                     component="div"

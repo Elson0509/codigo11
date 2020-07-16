@@ -5,6 +5,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Loading from '../../../components/Loading/Loading'
 import ChartGraficoCotacoes from '../../../components/Charts/ChartGraficoCotacoes'
 import ChartVolumeNegocios from '../../../components/Charts/ChartVolumeNegocios'
+import {Helmet} from 'react-helmet'
 
 const Index = (props) => {
 
@@ -29,6 +30,10 @@ const Index = (props) => {
 
     return (
         <Fragment>
+                <Helmet>
+                    <meta name="description" content={`Codigo11 - ${fii}11 - Gráfico de cotações históricas do FII`} />
+                    <title>{`Codigo11: ${fii}11 - Gráfico de cotações do FII`}</title>
+                </Helmet>
                 <ReactCSSTransitionGroup
                     component="div"
                     transitionName="TabsAnimation"
