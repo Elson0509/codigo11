@@ -178,7 +178,6 @@ const Index = (props) => {
                                         
                                         <div className="divider"/>
                                         <div className="row">
-                                            
                                             {selectAvancada && (
                                                 <Fragment>
                                                     {selectDY && 

@@ -90,5 +90,10 @@ export const Inicio = [
         icon: 'pe-7s-search',
         label: 'Pesquisar',
         to: '/pesquisar'
+    },
+    {
+        icon: 'lnr-list',
+        label: 'Lista de FIIs',
+        to: '/lista'
     }
 ];

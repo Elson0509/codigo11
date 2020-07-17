@@ -12,7 +12,7 @@ import {Link} from 'react-router-dom';
 import {Helmet} from 'react-helmet'
 import Adsense from '../../../components/Ads/Adsense'
 
-const Index = (props) => {
+const Index = () => {
     const [dados, setDados] = useState()
     const [loading, setLoading] = useState(false)
     const [errorMessage, setErrorMessage] = useState("")
@@ -67,9 +67,6 @@ const Index = (props) => {
                                     color={'dark'}
                                 />
                                 <CardQuotation frase={dados.frase}/>
-                                {/* <div className="col-lg-6 col-sm-12">
-                                    <CardFavoritoCollapse favorito={dados.favoritos[0]}/>
-                                </div> */}
                                 {dados.favoritos.length > 0 ?
                                     <div className="row">
                                         {dados.favoritos.map((el, ind) => {

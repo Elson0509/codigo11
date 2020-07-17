@@ -12,6 +12,7 @@ const Discussao = lazy(() => import('../../Pages/Discussao'));
 const Dashboard = lazy(() => import('../../Pages/Dashboard'));
 const Pesquisar = lazy(() => import('../../Pages/Pesquisar'));
 const Profile = lazy(() => import('../../Pages/Profile'));
+const ListaFII = lazy(() => import('../../Pages/ListaFII'));
 
 
 const AppMain = () => {
@@ -145,9 +146,19 @@ const AppMain = () => {
                 <Route exact path="/pesquisar" component={Pesquisar}/>
             </Suspense>
 
-            {/* <Route exact path="/" render={() => (
-                <Redirect to="/pesquisar"/>
-            )}/> */}
+            {/* Lista de FIIs */}
+
+            <Suspense fallback={
+                <div className="loader-container">
+                    <div className="loader-container-inner">
+                        <Loading/> 
+                    </div>
+                </div>
+            }>
+                <Route exact path="/lista" component={ListaFII}/>
+            </Suspense>
+
+            
             <ToastContainer/>
 
         </Fragment>

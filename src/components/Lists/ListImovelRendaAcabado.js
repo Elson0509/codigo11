@@ -1,8 +1,7 @@
 import React, {useState} from 'react';
 import Icon from '../Icon/Icon'
-import {numberToMetroQuadrado, numberWithPercentual, getLinkMapFromEndereco, numberWithDots} from '../../util/Utilities'
+import {numberToMetroQuadrado, getLinkMapFromEndereco, numberWithDots} from '../../util/Utilities'
 import {Popover, PopoverHeader, PopoverBody} from 'reactstrap';
-import ProgressBox from '../ProgressBars/ProgressBox';
 
 const ListImovelRendaAcabado = (props) => {
     const [popoverOpen, setPopoverOpen] = useState(false)

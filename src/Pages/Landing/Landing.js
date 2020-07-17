@@ -12,7 +12,7 @@ import Signup from './components/Signup'
 import Footer from './components/Footer'
 import {Helmet} from 'react-helmet'
 import bgmasthead from '../../../src/assets/img/bg-masthead.jpg'
-
+import ButtonListFundos from '../../components/Buttons/ButtonListFundos'
 
 const Landing = (props) => {
     const [search, setSearch] = useState('')
@@ -74,9 +74,11 @@ const Landing = (props) => {
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-9 mx-auto">
-                            <h1 className="mb-5">Bem vindo a Codigo11</h1>
-                            <h2 className="mb-5">A plataforma gratuita mais completa sobre fundos imobiliários.</h2>
-                            <h3 className="mb-5">Comece pesquisando abaixo:</h3>
+                            <h1 className="mb-5 h1 font-weight-bold">Bem vindo a Codigo11</h1>
+                            <h2 className="mb-5 h2">A plataforma gratuita mais completa sobre investimento em Fundos Imobiliários.</h2>
+                            <h3 className="mb-4 h3">Acesse a lista completa de FIIs disponíveis:</h3>
+                            <ButtonListFundos/>
+                            <h3 className="mb-4 h3">Ou faça sua pesquisa abaixo:</h3>
                         </div>
                         <div className="col-md-10 col-lg-8 col-xl-7 mx-auto">
                             <form>
