@@ -22,7 +22,6 @@ import {
 } from 'reactstrap';
 
 import {
-
     toast
 } from 'react-toastify';
 
@@ -192,6 +191,7 @@ const PerfilFII = (props) => {
                                 seguindo={favorito}
                                 favoritoClick = {favoritoHandler}
                             />
+
                             <Row>
                                 {cotacao && <Col lg="3" md="6" sm="12">
                                     <CardCotacao cotacao={cotacao}/>

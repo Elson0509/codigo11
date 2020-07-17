@@ -9,6 +9,7 @@ import { numberBrazilianMoney } from '../../../util/Utilities'
 import LoadingAdvancedSearch from '../../../components/Loading/LoadingAdvancedSearch'
 import SearchTable from '../../../components/Tables/SearchTable'
 import Adsense from '../../../components/Ads/Adsense'
+import CheckBoxGestao from '../../../components/Buttons/CheckBoxGestao'
 
 const Index = (props) => {
     const [result, setResult] = useState()
@@ -29,7 +30,7 @@ const Index = (props) => {
     const [selectGestao, setSelectGestao] = useState(false)
     const [dyChange, setDyChange] = useState('>=')
     const [dy, setDy] = useState(0)
-    const [gestao, setGestao] = useState(1)
+    const [gestao, setGestao] = useState(0)
     const [segmento, setSegmento] = useState([2])
     const [negociosChange, setNegociosChange] = useState('>=')
     const [negocios, setNegocios] = useState(10)
@@ -81,7 +82,7 @@ const Index = (props) => {
         .catch(err => {
             setLoadingSearch(false)
             setTextPesquisar('Pesquisar')
-            setErrorMessage(err.response.data.message || 'Ops, um erro ocorreu!')
+            setErrorMessage(err.response?.data?.message || 'Ops, um erro ocorreu!')
         })
     }
 
@@ -94,7 +95,7 @@ const Index = (props) => {
             })
             .catch(err => {
                 setLoading(false)
-                setErrorMessage(err.response.data.message || 'Ops, um erro ocorreu!')
+                setErrorMessage(err.response?.data?.message || 'Ops, um erro ocorreu!')
             })
     }, [])
 
@@ -166,7 +167,7 @@ const Index = (props) => {
                                                     <Button color="warning" onClick={() => setSelectPVP(prev => !prev)}
                                                             active={selectPVP}>P/VP</Button>
                                                     <Button color="secondary" onClick={() => setSelectVPC(prev => !prev)}
-                                                            active={selectVPC}>VPC</Button>
+                                                            active={selectVPC}>Cotação</Button>
                                                     <Button color="dark" onClick={() => setSelectAtvFis(prev => !prev)}
                                                             active={selectAtvFis}>At. Físicos</Button>
                                                     <Button color="info" onClick={() => setSelectGestao(prev => !prev)}
@@ -265,7 +266,7 @@ const Index = (props) => {
                                                     {selectVPC && 
                                                         <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-2">
                                                             <Card body color="secondary">
-                                                                <CardTitle className="text-dark text-center">Valor Patrimonial por Cota</CardTitle>
+                                                                <CardTitle className="text-dark text-center">Cotação</CardTitle>
                                                                 <Input type="select" value={vpcChange} onChange={(ev) => setVpcChange(ev.target.value)}>
                                                                     <option value=">=">Maior que</option>
                                                                     <option value="<=">Menor que</option>
@@ -292,8 +293,7 @@ const Index = (props) => {
                                                         <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-2">
                                                             <Card body inverse color="info">
                                                                 <CardTitle className="text-white text-center">Tipo de Gestão</CardTitle>
-                                                                <Input type="range" min="0" max="1" step="1" value={gestao} onChange={(ev) => setGestao(ev.target.value)}/>
-                                                                <h4 className="text-center enfase">{gestao===1 ? 'Ativa' : 'Passiva'}</h4>
+                                                                <CheckBoxGestao clicked={(ev) => setGestao(prev => prev == 1 ? 0 : 1)}/>
                                                             </Card>
                                                         </div>
                                                     }
