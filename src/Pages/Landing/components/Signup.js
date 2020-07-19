@@ -13,7 +13,7 @@ const Signup = () => {
                     <h2 className="mb-4">É grátis.</h2>
                     </div>
                     <div className="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                        <Link className="btn btn-block btn-lg btn-primary" to={'/login'}>
+                        <Link className="btn btn-block btn-lg btn-primary" to={'/login?aba=1'}>
                             Criar conta
                         </Link>
                     </div>

@@ -6,6 +6,7 @@ import { withRouter, Link } from 'react-router-dom';
 import ModalForgetPassword from '../../../components/Modals/ModalForgetPassword'
 import {Helmet} from 'react-helmet'
 
+
 const Index = (props) => {
     const [modal, setModal] = useState(false)
     useEffect(() => {
@@ -14,6 +15,11 @@ const Index = (props) => {
             props.history.push('/dashboard')
         }
     })
+
+    const getTabNumber = () => {
+        const queryParams = new URLSearchParams(props.location.search)
+        return queryParams.get('aba') && queryParams.get('aba')==1 ? 1 : 0
+    }
 
     const setModalHandler = () => {
         setModal(prev=>!prev)
@@ -51,6 +57,7 @@ const Index = (props) => {
                     <div className="logo-login margin-auto"/>
                 </Link>
                 <Tabs 
+                    selectedTabKey={getTabNumber()}
                     tabsWrapperClass="body-tabs body-tabs-layout" 
                     transform={false} 
                     showInkBar={true} 

@@ -3,14 +3,13 @@ import PageTitle from '../../../Layout/AppMain/PageTitleBase';
 import axios from '../../../util/axios-base';
 import GeneralCard from '../../../components/Cards/GeneralCard'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import Loading from '../../../components/Loading/Loading'
 import LoadingAdvancedSearch from '../../../components/Loading/LoadingAdvancedSearch'
 import SearchTable from '../../../components/Tables/SearchTable'
 import Adsense from '../../../components/Ads/Adsense'
+import {Helmet} from 'react-helmet'
 
 const Index = () => {
     const [result, setResult] = useState()
-    const [loading, setLoading] = useState(false)
     const [loadingSearch, setLoadingSearch] = useState(false)
     const [errorMessage, setErrorMessage] = useState("")
 
@@ -60,6 +59,10 @@ const Index = () => {
 
     return (
         <Fragment>
+            <Helmet>
+                <meta name="description" content={`Codigo11 - Lista de Fundos de Investimento Imobiliários ativos na bolsa.`} />
+                <title>{`Codigo11: Lista de Fundos Imobiliários`}</title>
+            </Helmet>
             {!errorMessage && 
                 <ReactCSSTransitionGroup
                     component="div"
@@ -89,9 +92,6 @@ const Index = () => {
                             }
                         </Fragment>
                 </ReactCSSTransitionGroup>
-            }
-            {
-                loading && <Loading/>
             }
             {errorMessage && 
                 <div className="alert alert-danger">
