@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import CardAtivo from '../../../../components/Cards/CardAtivo'
-import ListImovelRendaAcabado from '../../../../components/Lists/ListImovelRendaAcabado'
+import ListImovelVendaAcabado from '../../../../components/Lists/ListImovelVendaAcabado'
 import ListVendaAcabTotal from '../../../../components/Lists/ListImovelVendaAcabTotal'
 
 const ListVendaAcabados = (props) => {
@@ -17,7 +17,7 @@ const ListVendaAcabados = (props) => {
                                 order={ind+1}
                                 key={`lva${ind}`}
                                 >
-                                    <ListImovelRendaAcabado
+                                    <ListImovelVendaAcabado
                                         tipo="iva"
                                         imovel={imovel}
                                         order={ind+1}

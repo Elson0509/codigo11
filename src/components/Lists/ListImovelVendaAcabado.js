@@ -29,17 +29,6 @@ const ListImovelRendaAcabado = (props) => {
                 <span className="enfase">Unidades: </span>
                 {numberWithDots(props.imovel.unidades)}
             </li>}
-            {typeof (props.imovel.vacancia) != "undefined"  && <li className="list-group-item">
-                <ProgressBox 
-                    color={props.bgNumber}
-                    comment={`Vacância: ${numberWithPercentual(props.imovel.vacancia)}`}
-                    value={props.imovel.vacancia}
-                />                
-            </li>}
-            {typeof (props.imovel.inadimplencia) != "undefined" && <li className="list-group-item">
-                <span className="enfase">Inadimplência: </span>
-                {numberWithPercentual(props.imovel.inadimplencia)}
-            </li>}
             {props.imovel.caracteristica && <li className="list-group-item text-center">
                 <button className={`mb-2 mr-2 btn btn-${props.bgNumber}`} id={`${props.tipo}${props.order}`} onClick={toggle}>Caracteríticas</button>
                 <Popover className={`popover-bg bg-${props.bgNumber}`} placement="left" isOpen={popoverOpen} target={`${props.tipo}${props.order}`} toggle={toggle}>

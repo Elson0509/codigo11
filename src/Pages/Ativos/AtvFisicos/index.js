@@ -35,6 +35,7 @@ const Index = (props) => {
         const path = `/ativos/fis/${fii}`
         axios.get(path)
             .then(res => {
+                console.log(res.data)
                 setLoading(false)
                 setDados(res.data)
             })
@@ -121,11 +122,14 @@ const Index = (props) => {
                                                     <ChartImovelArea imoveis={dados.renda_acabado} type="Imóvel"/>
                                                 </GeneralCard>
                                             </Col>
-                                            <Col className="col-sm-12 col-lg-6">
-                                                <GeneralCard title="Imóveis por % Receita" titleStyle="text-center">
-                                                    <ChartImovelPercReceita imoveis={dados.renda_acabado} type="Imóvel"/>
-                                                </GeneralCard>
-                                            </Col>
+                                            {
+                                                dados.renda_acabado.some(el => el.porc_rec_fii != 0) &&
+                                                <Col className="col-sm-12 col-lg-6">
+                                                    <GeneralCard title="Imóveis por % Receita" titleStyle="text-center">
+                                                        <ChartImovelPercReceita imoveis={dados.renda_acabado} type="Imóvel"/>
+                                                    </GeneralCard>
+                                                </Col>
+                                            }
                                             <Col className="col-sm-12 col-lg-12">
                                                 <GeneralCard title="Imóveis para renda no mapa" titleStyle="text-center">
                                                     <VerctorMap imoveis={dados.renda_acabado} markerColor="#5cb85c"/>
@@ -135,7 +139,7 @@ const Index = (props) => {
                                         
                                         <Row className="">
                                             {   dados.contrato_locacao_renda_acabado &&
-                                                Object.entries(dados.contrato_locacao_renda_acabado).length > 0 &&
+                                                Object.entries(dados.contrato_locacao_renda_acabado).some(el => el[1] != 0) &&
                                                     <Col className="col-sm-12 col-lg-6">
                                                         <GeneralCard title="Prazos dos contratos" titleStyle="text-center">
                                                             <ChartHorizontalLabelsObject 
