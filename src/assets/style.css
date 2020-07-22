@@ -1104,27 +1104,9 @@ input[type="range"] {
 }
 
 /****Entrar e Criar buttons******/
-.criar-btn {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: #1319EA;
-    color: #fff;
-    cursor: pointer;
-    font-size: 1.2em;
-    padding: 0.5rem;
-    border: 0;
-    transition: all 0.5s;
-    border-radius: 10px;
-    width: auto;
-    position: relative;
-    letter-spacing: 1px;
-    margin-right: 20px;
-}
 
-.criar-btn:hover {
-    background: #fff;
-    color: #1d1d1d;
-    transition: all 0.8s;
-    box-shadow: 0px 6px 15px #fff;
+.criar-btn{
+    margin-right: 1em;
 }
 
 @media (max-width: 500px) {
@@ -1133,13 +1115,12 @@ input[type="range"] {
     }
 }
 
-.entrar-btn {
+.login-btn {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: rgb(255, 255, 255);
-    color: #1d1d1d;
+    background: #2FA4E7;
+    color: white;
     cursor: pointer;
     font-size: 1.2em;
-    padding: 0.5rem;
     border: 0;
     transition: all 0.5s;
     border-radius: 10px;
@@ -1149,9 +1130,9 @@ input[type="range"] {
     min-width: 50px;
 }
 
-.entrar-btn:hover {
-    background: #1319EA;
+.login-btn:hover {
+    background: white;
     transition: all 0.8s;
-    box-shadow: 0px 6px 15px #00f;
-    color: #fff;
+    box-shadow: 0px 6px 15px #2FA4E7;
+    color: #46AEF7;
 }

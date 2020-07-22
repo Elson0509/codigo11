@@ -9,8 +9,9 @@ const CardListRelatorios = (props) => {
         if(props.lista){
             return props.lista.map((item, ind) => (
                 <a href={`https://fnet.bmfbovespa.com.br/fnet/publico/exibirDocumento?id=${item.documento_nr}&#toolbar=0`} target="_blank" rel="noopener noreferrer" key={`${props.title}${ind}`}>
-                    <ListGroupItem tag="button" action><span className="enfase link">
-                        {item.data_ref} 
+                    <ListGroupItem tag="button" action>
+                        <span className="enfase link">
+                            {item.data_ref} 
                         </span>
                     </ListGroupItem>
                 </a>

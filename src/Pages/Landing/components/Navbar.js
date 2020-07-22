@@ -8,8 +8,8 @@ const Navbar = () => {
             <div className="container">
                 <div className="navbar-brand logo-landing"/>
                 <span>
-                    <LinkButton to={'/login?aba=1'} className="criar-btn">Criar Conta</LinkButton>
-                    <LinkButton to={'/login'} className="entrar-btn">Entrar</LinkButton>
+                    <LinkButton to={'/login?aba=1'} className="login-btn criar-btn">Criar Conta</LinkButton>
+                    <LinkButton to={'/login'} className="login-btn">Entrar</LinkButton>
                 </span>
                 {/* <Link className="btn btn-lg btn-light" to={'/login'}>
                     Entrar
