@@ -8,7 +8,6 @@ import ChartLineDataValor from '../../../components/Charts/ChartLineDataValor'
 import ChartLineReceitas from '../../../components/Charts/ChartLineReceitas'
 import ChartLineDespesasContas from '../../../components/Charts/ChartLineDespesasContas'
 import {Helmet} from 'react-helmet'
-import Adsense from '../../../components/Ads/Adsense'
 
 const Index = (props) => {
     const [dados, setDados] = useState()
@@ -124,7 +123,6 @@ const Index = (props) => {
                     <p>{errorMessage}</p>
                 </div>
             }
-            <Adsense/>
         </Fragment>
     );
 };

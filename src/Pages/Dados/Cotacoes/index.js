@@ -6,7 +6,6 @@ import Loading from '../../../components/Loading/Loading'
 import ChartGraficoCotacoes from '../../../components/Charts/ChartGraficoCotacoes'
 import ChartVolumeNegocios from '../../../components/Charts/ChartVolumeNegocios'
 import {Helmet} from 'react-helmet'
-import Adsense from '../../../components/Ads/Adsense'
 
 const Index = (props) => {
     const [dados, setDados] = useState()
@@ -72,7 +71,7 @@ const Index = (props) => {
                             </div>
                         }
                 </ReactCSSTransitionGroup>
-            <Adsense/>
+            
         </Fragment>
     );
 };

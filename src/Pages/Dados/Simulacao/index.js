@@ -15,7 +15,6 @@ import ChartLinePrecoPrecoMedio from '../../../components/Charts/ChartLinePrecoP
 import EventosTable from '../../../components/Tables/EventosTable'
 import {userId} from '../../../util/UserFunctions'
 import {Helmet} from 'react-helmet'
-import Adsense from '../../../components/Ads/Adsense'
 
 const Index = (props) => {
     const [dados, setDados] = useState()
@@ -335,7 +334,7 @@ const Index = (props) => {
                             </div>
                         }
                 </ReactCSSTransitionGroup>
-            <Adsense/>
+            
         </Fragment>
     );
 };

@@ -5,7 +5,6 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import TimelineOperations from '../../../components/Timelines/TimelineOperations'
 import Loading from '../../../components/Loading/Loading'
 import {Helmet} from 'react-helmet'
-import Adsense from '../../../components/Ads/Adsense'
 
 const Index = (props) => {
     const [dados, setDados] = useState()
@@ -68,7 +67,7 @@ const Index = (props) => {
                     <p>{errorMessage}</p>
                 </div>
             }
-            <Adsense/>
+            
         </Fragment>
     );
 };

@@ -8,7 +8,7 @@ import {Button, ButtonGroup, Card, Input, CardTitle} from 'reactstrap';
 import { numberBrazilianMoney } from '../../../util/Utilities'
 import LoadingAdvancedSearch from '../../../components/Loading/LoadingAdvancedSearch'
 import SearchTable from '../../../components/Tables/SearchTable'
-import Adsense from '../../../components/Ads/Adsense'
+import {Helmet} from 'react-helmet'
 import CheckBoxGestao from '../../../components/Buttons/CheckBoxGestao'
 
 const Index = (props) => {
@@ -123,6 +123,10 @@ const Index = (props) => {
 
     return (
         <Fragment>
+            <Helmet>
+                <meta name="description" content={`Codigo11 - Pesquisa de Fundos de Investimento Imobiliários ativos na bolsa.`} />
+                <title>{`Codigo11: Pesquisa de Fundos Imobiliários`}</title>
+            </Helmet>
             {!errorMessage && 
                 <ReactCSSTransitionGroup
                     component="div"
@@ -332,7 +336,7 @@ const Index = (props) => {
                     <p>{errorMessage}</p>
                 </div>
             }
-            <Adsense/>
+            
         </Fragment>
     );
 };

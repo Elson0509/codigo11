@@ -5,7 +5,6 @@ import GeneralCard from '../../../components/Cards/GeneralCard'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import LoadingAdvancedSearch from '../../../components/Loading/LoadingAdvancedSearch'
 import SearchTable from '../../../components/Tables/SearchTable'
-import Adsense from '../../../components/Ads/Adsense'
 import {Helmet} from 'react-helmet'
 
 const Index = () => {
@@ -98,7 +97,6 @@ const Index = () => {
                     <p>{errorMessage}</p>
                 </div>
             }
-            <Adsense/>
         </Fragment>
     );
 };

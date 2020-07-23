@@ -7,7 +7,6 @@ import ChartProventos from '../../../components/Charts/ChartProventos'
 import ChartDY from '../../../components/Charts/ChartDY'
 import CardProventos from '../../../components/Cards/CardProventos'
 import {Helmet} from 'react-helmet'
-import Adsense from '../../../components/Ads/Adsense'
 
 const Index = (props) => {
     const [dados, setDados] = useState()
@@ -81,7 +80,7 @@ const Index = (props) => {
                             </div>
                         }
                 </ReactCSSTransitionGroup>
-                <Adsense/>
+                
         </Fragment>
     );
 };
