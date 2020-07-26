@@ -77,7 +77,7 @@ const Index = () => {
                                     </div>
                                     <div className="col-12">
                                         <GeneralCard title='Informativos Mensais' comentary='informativos mensais recém divulgados'>
-                                            <EventsTable eventos={result.rel_gerencial}/>
+                                            <EventsTable eventos={result.rel_mensal}/>
                                         </GeneralCard>
                                     </div>
                                     <div className="col-12">
