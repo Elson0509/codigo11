@@ -25,16 +25,18 @@ const SignupForm = (props) => {
             password2: ''
         },
         onSubmit: values => {
-            setButtonText('CRIANDO...')
-            Axios.post('/register', values)
-                .then(res => {
-                    setSuccessMessage(res.data.message)
-                    setButtonText('CONTA CRIADA!')
-                })
-                .catch(err => {
-                    setErrorMessage(err.response.data.error.message.message || 'Desculpe, mas um erro ocorreu.')
-                    setButtonText('CRIAR')
-                })
+            if(buttonText==='CRIAR'){
+                setButtonText('CRIANDO...')
+                Axios.post('/register', values)
+                    .then(res => {
+                        setSuccessMessage(res.data.message)
+                        setButtonText('CONTA CRIADA!')
+                    })
+                    .catch(err => {
+                        setErrorMessage(err.response.data.error.message.message || 'Desculpe, mas um erro ocorreu.')
+                        setButtonText('CRIAR')
+                    })
+            }
         },
         validationSchema
     })

@@ -13,6 +13,7 @@ const Dashboard = lazy(() => import('../../Pages/Dashboard'));
 const Pesquisar = lazy(() => import('../../Pages/Pesquisar'));
 const Profile = lazy(() => import('../../Pages/Profile'));
 const ListaFII = lazy(() => import('../../Pages/ListaFII'));
+const Eventos = lazy(() => import('../../Pages/Eventos'));
 
 
 const AppMain = () => {
@@ -156,6 +157,18 @@ const AppMain = () => {
                 </div>
             }>
                 <Route exact path="/lista" component={ListaFII}/>
+            </Suspense>
+
+            {/* Eventos */}
+
+            <Suspense fallback={
+                <div className="loader-container">
+                    <div className="loader-container-inner">
+                        <Loading/> 
+                    </div>
+                </div>
+            }>
+                <Route exact path="/eventos" component={Eventos}/>
             </Suspense>
 
             

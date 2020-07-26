@@ -12,7 +12,7 @@ class Nav extends Component {
             <Fragment>
                 <h5 className="app-sidebar__heading">Perfil do FII</h5>
                 <MetisMenu content={Profile(this.props.match.params.fii)} activeLinkFromLocation className="vertical-nav-menu" iconNamePrefix="" classNameStateIcon="pe-7s-angle-down"/>
-                <h5 className="app-sidebar__heading">Informações</h5>
+                <h5 className="app-sidebar__heading">Informações do FII</h5>
                 <MetisMenu content={Info(this.props.match.params.fii)} activeLinkFromLocation className="vertical-nav-menu" iconNamePrefix="" classNameStateIcon="pe-7s-angle-down"/>
                 <h5 className="app-sidebar__heading">Discussão</h5>
                 <MetisMenu content={Discussao(this.props.match.params.fii)} activeLinkFromLocation className="vertical-nav-menu" iconNamePrefix="" classNameStateIcon="pe-7s-angle-down"/>

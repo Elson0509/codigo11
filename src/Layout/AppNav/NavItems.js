@@ -18,7 +18,6 @@ export const Info = (fii) => [
             {
                 label: 'Financeiros',
                 to: '/'+fii+'/ativos/financeiros',
-
             },
             {
                 label: 'Consolidado',
@@ -95,5 +94,10 @@ export const Inicio = [
         icon: 'lnr-list',
         label: 'Lista de FIIs',
         to: '/lista'
+    },
+    {
+        icon: 'pe-7s-star',
+        label: 'Eventos',
+        to: '/eventos'
     }
 ];
