@@ -164,6 +164,9 @@ const PerfilFII = (props) => {
             <Helmet>
                 <meta name="description" content={`Codigo11 - ${fii}11 - Perfil e informações gerais relevantes do Fundo imobiliário`} />
                 <title>{`Codigo11: ${fii}11 - Perfil de FII`}</title>
+                <script data-ad-client="ca-pub-8540652797620487" 
+                    async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+                </script>
             </Helmet>
             <ReactCSSTransitionGroup
                 component="div"

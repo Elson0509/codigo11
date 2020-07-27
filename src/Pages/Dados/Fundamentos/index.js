@@ -42,6 +42,9 @@ const Index = (props) => {
                 <Helmet>
                     <meta name="description" content={`Codigo11 - ${fii}11 - Tabela de informações com fundamentos do FII`} />
                     <title>{`Codigo11: ${fii}11 - Tabelas de Fundamentos do FII`}</title>
+                    <script data-ad-client="ca-pub-8540652797620487" 
+                        async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+                    </script>
                 </Helmet>
                 <ReactCSSTransitionGroup
                     component="div"
