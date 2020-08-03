@@ -99,5 +99,10 @@ export const Inicio = [
         icon: 'pe-7s-star',
         label: 'Eventos',
         to: '/eventos'
+    },
+    {
+        icon: 'lnr-book',
+        label: 'Livros Recomendados',
+        to: '/livros'
     }
 ];
