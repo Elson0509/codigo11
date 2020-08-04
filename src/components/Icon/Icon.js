@@ -47,7 +47,6 @@ import {
     faSort, /*sort*/
     faSortUp, /*sort-up*/ 
     faSortDown, /*sort-down*/    
-    
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
