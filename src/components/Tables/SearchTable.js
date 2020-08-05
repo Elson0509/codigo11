@@ -1,7 +1,7 @@
 import React, {Fragment, useState} from 'react';
 import {numberBrazilianMoney, decimalNumberBrazilian,
         percentNumberBrazilian, valueToRes, IntegerNumberBrazilian} from '../../util/Utilities'
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import Icon from '../Icon/Icon'
 
 const SearchTable = (props) => {
@@ -24,10 +24,6 @@ const SearchTable = (props) => {
               }
               return 0;
         })
-    }
-
-    const rowClickHandler = (codfii) => {
-        props.history.push(`/${codfii}/profile`)
     }
 
     const getSortIcon = (key) => {
@@ -115,8 +111,8 @@ const SearchTable = (props) => {
                     <Fragment>
                         {sortedFiis.map((el, ind) => {
                             return (
-                                <tr key={ind} onClick={() => rowClickHandler(el.codfii)} className="link">
-                                    <th scope="row" className={sortConfig && sortConfig.key ==='codfii' ? 'table-primary' : ''}>{el.codfii}</th>
+                                <tr key={ind} className="link">
+                                    <th scope="row" className={sortConfig && sortConfig.key ==='codfii' ? 'table-primary' : ''}><Link to={`/${el.codfii}/profile`}>{el.codfii}</Link></th>
                                     <td className={sortConfig && sortConfig.key ==='razao_social' ? 'table-primary' : ''}>{el.razao_social}</td>
                                     <td className={sortConfig && sortConfig.key ==='descricao' ? 'table-primary' : ''}>{el.descricao}</td>
                                     <td className={sortConfig && sortConfig.key ==='cotacao' ? 'table-primary' : ''}>{el.cotacao ? numberBrazilianMoney(el.cotacao) : 'N/A'}</td>

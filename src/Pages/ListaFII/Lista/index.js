@@ -82,7 +82,7 @@ const Index = () => {
                             {
                                 result &&
                                 <div className="row">
-                                    <div className="col-12">
+                                    <div className="col-12 over">
                                         <GeneralCard>
                                             <SearchTable fiis={result}/>
                                         </GeneralCard>
